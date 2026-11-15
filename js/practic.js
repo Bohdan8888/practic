@@ -226,58 +226,271 @@
 
 
 
-function slugify(title){
-const toLower = title.toLowerCase();
-const wordsSplit = toLower.split(" ");
-const joinWords = wordsSplit.join("-");
-return joinWords;
-};
+// function slugify(title){
+// const toLower = title.toLowerCase();
+// const wordsSplit = toLower.split(" ");
+// const joinWords = wordsSplit.join("-");
+// return joinWords;
+// };
 
-console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
-console.log(slugify("English for developer")); // "english-for-developer"
-console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
-console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
-
-
-
-
-function makeArray(firstArray, secondArray, maxLength){
-const newArrey = firstArray.concat(secondArray);
-
-if(newArrey.length > maxLength)
-    return newArrey.slice(0, maxLength)
-else{
-    return newArrey;
-}
-
-};
-
-
-console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
-console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
-console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
-
-
-function filterArray(numbers, value) {
-  const filteredNumbers = [];
-
-  for (const number of numbers) {
-    if (number > value) {
-      filteredNumbers.push(number);
-    }
-  }
-
-  return filteredNumbers;
-};
+// console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
+// console.log(slugify("English for developer")); // "english-for-developer"
+// console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+// console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
 
 
 
 
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+// function makeArray(firstArray, secondArray, maxLength){
+// const newArrey = firstArray.concat(secondArray);
+
+// if(newArrey.length > maxLength)
+//     return newArrey.slice(0, maxLength)
+// else{
+//     return newArrey;
+// }
+
+// };
+
+
+// console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
+// console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
+// console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+
+//   for (const number of numbers) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+// };
+
+
+
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+// console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+// console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+// console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+// console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+
+
+
+
+
+//  function slugify(title){
+//    const titleLowercase = title.toLowerCase();
+//    const splitTitle = titleLowercase.split(" ")
+//    const joinTitle = splitTitle.join("-")
+// return joinTitle;
+//  };
+//  console.log(slugify("My First Website"));
+// // "my-first-website"
+
+// console.log(slugify("Learn JavaScript"));
+// // "learn-javascript"
+
+// console.log(slugify("FRONTEND DEVELOPER"));
+// // "frontend-developer"
+
+
+
+// function makeSlug(title, separator){
+//   const lowerCaseTitle = title.toLowerCase();
+//   const sliceTitle = lowerCaseTitle.split(" ");
+//   const joinTitle = sliceTitle.join(separator);
+
+// return joinTitle;
+
+// }
+
+
+
+// console.log(makeSlug("Hello World", "_"));
+// // "hello_world"
+
+// console.log(makeSlug("JavaScript Course", "-"));
+// // "javascript-course"
+
+// console.log(makeSlug("My New Project", "."));
+
+// // "my.new.project"
+
+
+// function createSlug(title){
+// const trimTitle = title.trim();
+// const lowerTitle = trimTitle.toLowerCase();
+// const splitTitle =lowerTitle.split(" ");
+// const joinTitle = splitTitle.join("-");
+// return joinTitle;
+
+
+// }
+// console.log(createSlug("  HELLO MY FRIEND  "));
+// // "hello-my-friend"
+
+// console.log(createSlug("  JavaScript Course "));
+// // "javascript-course"
+
+// console.log(createSlug("  MY FIRST PROJECT  "));
+
+// // "my-first-project"
+
+
+
+// function countWords(text){
+// const splitText = text.split(" ");
+// return splitText.length;
+// }
+// console.log(countWords("Hello World")); // 2
+// console.log(countWords("JavaScript is awesome")); // 3
+// console.log(countWords("I love programming")); // 3
+// console.log(countWords("Frontend Developer")); // 2
+// console.log(countWords("Learn JavaScript today")); // 3
+
+// function getFirstTwoWords(text){
+// const splitText = text.split(" ");
+// const sliceText = splitText.slice(0, 2);
+// const joinText = sliceText.join(" ")
+// return joinText;
+// }
+// console.log(getFirstTwoWords("JavaScript is awesome"));
+// // "JavaScript is"
+
+// console.log(getFirstTwoWords("Learn frontend development"));
+// // "Learn frontend"
+
+// console.log(getFirstTwoWords("HTML CSS JavaScript"));
+// // "HTML CSS"
+
+// console.log(getFirstTwoWords("React Developer Course"));
+// // "React Developer"
+
+
+
+// function formatTitle(title){
+//   const lowerTitle = title.toLowerCase();
+//   const splitTitle = lowerTitle.split(" ");
+//   ;
+//   const joinTitle = splitTitle.join("_");
+//  return joinTitle;
+// };
+// console.log(formatTitle("My First Project"));
+// // "my_first_project"
+
+// console.log(formatTitle("LEARN HTML CSS"));
+// // "learn_html_css"
+
+// console.log(formatTitle("JavaScript For Beginners"));
+// // "javascript_for_beginners"
+
+// console.log(formatTitle("FRONTEND DEVELOPER"));
+// // "frontend_developer"
+
+
+
+
+// function createShortSlug(title, maxLength){
+//   const lowerTitle = title.toLowerCase();
+//   const splitTitle = lowerTitle.split(" ");
+//   const joinTitle = splitTitle.join("-");
+
+//   if (joinTitle.length > maxLength) {
+    
+//     return  joinTitle.slice(0, maxLength);
+//   } else {
+//     return joinTitle;
+//   }
+// }
+// console.log(createShortSlug("JavaScript for beginners", 10));
+// // "javascript"
+
+// console.log(createShortSlug("Frontend Developer", 8));
+// // "frontend"
+
+// console.log(createShortSlug("Hello World", 20));
+// // "hello-world"
+
+// console.log(createShortSlug("My First Project", 7));
+// // "my-firs"
+
+
+
+
+// function shortenDescription(description, maxLength){
+
+//   const lowerDescription = description.toLowerCase();
+//    if (lowerDescription.length > maxLength) {
+//     return lowerDescription.slice(0, maxLength)
+//    } else {
+//     return lowerDescription;
+//    }
+// }
+// console.log(shortenDescription("Beautiful Monstera Plant", 9));
+// // "beautiful"
+
+// console.log(shortenDescription("Green Cactus", 20));
+// // "green cactus"
+
+// console.log(shortenDescription("JavaScript Developer", 5));
+// // "javas"
+
+// console.log(shortenDescription("Hello World", 11));
+// // "hello world"
+
+
+
+
+// function prepareTitle(title, maxLength){
+// const lowerTitile = title.toLowerCase();
+// const trimTitle = lowerTitile.trim();
+// const splitTitle = trimTitle.split(" ");
+// const joinTitle = splitTitle.join("-");
+// if (joinTitle.length > maxLength) {
+//   return joinTitle.slice(0, maxLength);
+// } else {
+//   return joinTitle;
+// }
+// };
+// console.log(prepareTitle("  BIG SALE TODAY  ", 10));
+// // "big-sale-t"
+
+// console.log(prepareTitle("  My Project  ", 20));
+// // "my-project"
+
+// console.log(prepareTitle("  Frontend Course  ", 8));
+// // "frontend"
+
+// console.log(prepareTitle("  JavaScript Developer  ", 17));
+// // "javascript-develo"
+
+
+// function getOddNumbers(numbers){
+//    const newNumber = [];
+//    for(let i = 0; i < numbers.length; i++){
+// if(numbers[i] % 2 === 1){
+// newNumber.push(numbers[i])
+// }
+
+//    }
+// return newNumber;
+// };
+// console.log(getOddNumbers([1, 2, 3, 4, 5]));
+// // [1, 3, 5]
+
+// console.log(getOddNumbers([10, 15, 20, 25]));
+// // [15, 25]
+
+// console.log(getOddNumbers([2, 4, 6]));
+// // []
+
+// console.log(getOddNumbers([7, 9, 11]));
+// // [7, 9, 11]
