@@ -178,47 +178,106 @@
 // console.log(getFileName("index"));      // "index"
 
 
-function checkForSpam(message){
-message = message.toLowerCase(message);
-if (message.includes("spam")) {
-    return true;
-}else if(message.includes("sale")) {
-return true;
-}
-else {
-    return false;
-}
+// function checkForSpam(message){
+// message = message.toLowerCase(message);
+// if (message.includes("spam")) {
+//     return true;
+// }else if(message.includes("sale")) {
+// return true;
+// }
+// else {
+//     return false;
+// }
 
-};
-console.log(checkForSpam("Latest technology news")); // false
-console.log(checkForSpam("JavaScript weekly newsletter")); // false
-console.log(checkForSpam("Get best sale offers now!")); // true
-console.log(checkForSpam("Amazing SalE, only tonight!")); // true
-console.log(checkForSpam("Trust me, this is not a spam message")); // true
-console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
-console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+// };
+// console.log(checkForSpam("Latest technology news")); // false
+// console.log(checkForSpam("JavaScript weekly newsletter")); // false
+// console.log(checkForSpam("Get best sale offers now!")); // true
+// console.log(checkForSpam("Amazing SalE, only tonight!")); // true
+// console.log(checkForSpam("Trust me, this is not a spam message")); // true
+// console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
+// console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 
 
-function getShippingCost(country, price){
-switch (country) {
-    case "Australia":
-     return `Shipping to ${country} will cost 170 credits`;
+// function getShippingCost(country, price){
+// switch (country) {
+//     case "Australia":
+//      return `Shipping to ${country} will cost 170 credits`;
 
-      case "China":
-        return `Shipping to ${country} will cost 100 credits`;
-        case "Chile":
-             return `Shipping to ${country} will cost 250 credits`;
-             case "Jamaica":
-                return `Shipping to ${country} will cost 120 credits`;
-    default:
-        return "Sorry, there is no delivery to your country";
+//       case "China":
+//         return `Shipping to ${country} will cost 100 credits`;
+//         case "Chile":
+//              return `Shipping to ${country} will cost 250 credits`;
+//              case "Jamaica":
+//                 return `Shipping to ${country} will cost 120 credits`;
+//     default:
+//         return "Sorry, there is no delivery to your country";
     
-}
+// }
+// };
+
+// console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
+// console.log(getShippingCost("Germany")); // "Sorry, there is no delivery to your country"
+// console.log(getShippingCost("China")); // "Shipping to China will cost 100 credits"
+// console.log(getShippingCost("Chile")); // "Shipping to Chile will cost 250 credits"
+// console.log(getShippingCost("Jamaica")); // "Shipping to Jamaica will cost 120 credits"
+// console.log(getShippingCost("Sweden")); // "Sorry, there is no delivery to your country"
+
+
+
+
+function slugify(title){
+const toLower = title.toLowerCase();
+const wordsSplit = toLower.split(" ");
+const joinWords = wordsSplit.join("-");
+return joinWords;
 };
 
-console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
-console.log(getShippingCost("Germany")); // "Sorry, there is no delivery to your country"
-console.log(getShippingCost("China")); // "Shipping to China will cost 100 credits"
-console.log(getShippingCost("Chile")); // "Shipping to Chile will cost 250 credits"
-console.log(getShippingCost("Jamaica")); // "Shipping to Jamaica will cost 120 credits"
-console.log(getShippingCost("Sweden")); // "Sorry, there is no delivery to your country"
+console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
+
+
+
+
+function makeArray(firstArray, secondArray, maxLength){
+const newArrey = firstArray.concat(secondArray);
+
+if(newArrey.length > maxLength)
+    return newArrey.slice(0, maxLength)
+else{
+    return newArrey;
+}
+
+};
+
+
+console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
+console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
+console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+
+
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+
+  for (const number of numbers) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  }
+
+  return filteredNumbers;
+};
+
+
+
+
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
