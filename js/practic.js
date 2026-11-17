@@ -5,6 +5,8 @@
 //     return "Access denied";
 // };
 
+// const { use } = require("react");
+
 
 // };
 // console.log(checkAge(20)); // "Access granted"
@@ -494,3 +496,185 @@
 
 // console.log(getOddNumbers([7, 9, 11]));
 // // [7, 9, 11]
+
+
+
+
+
+//   const user = {
+//   name: "Bohdan",
+//   age: 27,
+//   city: "Odesa"
+// };
+
+//   function updateAge(user, newAge){
+//    user.age = newAge;
+//    return user;
+//   }
+
+
+// console.log(updateAge(user, 28));
+// // { name: "Bohdan", age: 28, city: "Odesa" }
+
+// console.log(updateAge(user, 30));
+// // { name: "Bohdan", age: 30, city: "Odesa" }
+
+
+
+
+// const product = {
+//   name: "Monstera",
+//   price: 80,
+//   quantity: 5,
+//   isAvailable: true
+// };
+
+// function checkProduct(product){
+// if (product.isAvailable === true && product.quantity > 0) {
+//     return "Product available";
+// } else {
+//     return "Product unavailable";
+// }
+// }
+
+// console.log(checkProduct({
+//   name: "Monstera",
+//   price: 80,
+//   quantity: 5,
+//   isAvailable: true
+// }));
+// // "Product available"
+
+// console.log(checkProduct({
+//   name: "Cactus",
+//   price: 25,
+//   quantity: 0,
+//   isAvailable: true
+// }));
+// // "Product unavailable"
+
+// console.log(checkProduct({
+//   name: "Orchid",
+//   price: 120,
+//   quantity: 3,
+//   isAvailable: false
+// }));
+// // "Product unavailable"
+
+// console.log(checkProduct({
+//   name: "Rose",
+//   price: 15,
+//   quantity: 0,
+//   isAvailable: false
+// }));
+// // "Product unavailable"
+
+
+// const cart = {
+//   items: 3,
+//   price: 40,
+//   discount: 20
+// };
+
+
+// function calculateCartTotal(cart){
+// return cart.items * cart.price - cart.discount;
+// };
+
+// console.log(calculateCartTotal({
+//   items: 3,
+//   price: 40,
+//   discount: 20
+// }));
+// // 100
+
+// console.log(calculateCartTotal({
+//   items: 2,
+//   price: 50,
+//   discount: 10
+// }));
+// // 90
+
+// console.log(calculateCartTotal({
+//   items: 5,
+//   price: 15,
+//   discount: 0
+// }));
+// // 75
+
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 }
+// ];
+
+// function getProductNames(products){
+// const newProduct =  [];
+// for (const i of products) {
+//     newProduct.push(i.name)
+// }
+// return newProduct;
+// };
+// console.log(getProductNames(products));
+// // ["Monstera", "Cactus", "Orchid"]
+
+
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 }
+// ];
+
+// function getTotalPrice(products){
+// let totalPrice = 0;
+// for (const i of products) {
+//    totalPrice = totalPrice + i.price
+// }
+// return totalPrice
+// };
+
+// console.log(getTotalPrice(products));
+// // 225
+
+// console.log(getTotalPrice([
+//   { name: "Rose", price: 15 },
+//   { name: "Tulip", price: 10 }
+// ]));
+// // 25
+
+// console.log(getTotalPrice([]));
+// // 0
+
+
+
+const products = [
+  { name: "Monstera", price: 80 },
+  { name: "Cactus", price: 25 },
+  { name: "Orchid", price: 120 },
+  { name: "Rose", price: 15 }
+];
+function getExpensiveProducts(products, minPrice){
+  const newPprice = [];
+  for (const product of products) {
+    if (product.price > minPrice) {
+        newPprice.push(product)
+    }
+  }
+  return newPprice;
+};
+
+
+
+console.log(getExpensiveProducts(products, 50));
+// [
+//   { name: "Monstera", price: 80 },
+//   { name: "Orchid", price: 120 }
+// ]
+
+console.log(getExpensiveProducts(products, 100));
+// [
+//   { name: "Orchid", price: 120 }
+// ]
+
+console.log(getExpensiveProducts(products, 150));
+// []
