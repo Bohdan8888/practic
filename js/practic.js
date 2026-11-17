@@ -647,34 +647,414 @@
 
 
 
-const products = [
-  { name: "Monstera", price: 80 },
-  { name: "Cactus", price: 25 },
-  { name: "Orchid", price: 120 },
-  { name: "Rose", price: 15 }
-];
-function getExpensiveProducts(products, minPrice){
-  const newPprice = [];
-  for (const product of products) {
-    if (product.price > minPrice) {
-        newPprice.push(product)
-    }
-  }
-  return newPprice;
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 },
+//   { name: "Rose", price: 15 }
+// ];
+// function getExpensiveProducts(products, minPrice){
+//   const newPprice = [];
+//   for (const product of products) {
+//     if (product.price > minPrice) {
+//         newPprice.push(product)
+//     }
+//   }
+//   return newPprice;
+// };
+
+
+
+// console.log(getExpensiveProducts(products, 50));
+// // [
+// //   { name: "Monstera", price: 80 },
+// //   { name: "Orchid", price: 120 }
+// // ]
+
+// console.log(getExpensiveProducts(products, 100));
+// // [
+// //   { name: "Orchid", price: 120 }
+// // ]
+
+// console.log(getExpensiveProducts(products, 150));
+// // []
+
+
+// function calculateTotal(price){
+// let calculatePrice = 0;
+// for (const i of price) {
+// calculatePrice += i;
+// }
+// return calculatePrice;
+// };
+// console.log(calculateTotal([25, 40, 15, 80, 30]));
+// // 190
+
+// console.log(calculateTotal([10, 20, 30]));
+// // 60
+
+// console.log(calculateTotal([]));
+// // 0
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 },
+//   { name: "Rose", price: 15 },
+//   { name: "Palm", price: 90 }
+// ];
+
+// function getAffordableProducts(products, budget){
+// const newArrea = [];
+// for (const i of products) {
+//   if (i.price <= budget) {
+//     newArrea.push(i);
+//   }
+// }
+// return newArrea;
+// };
+
+
+// console.log(getAffordableProducts(products, 80));
+// // Monstera, Cactus, Rose
+
+// console.log(getAffordableProducts(products, 30));
+// // Cactus, Rose
+
+// console.log(getAffordableProducts(products, 10));
+// // []
+
+// console.log(getAffordableProducts(products, 120));
+// // Все пять товаров
+
+
+
+
+
+
+
+// const users = [
+//   { name: "Bohdan", age: 27 },
+//   { name: "Alex", age: 16 },
+//   { name: "John", age: 32 },
+//   { name: "Mark", age: 19 },
+//   { name: "Anna", age: 15 }
+// ];
+
+//  function getAdultUsers(users){
+  
+//   const invalidAge = [];
+
+// for (const i of users) {
+//   if (i.age >= 18) {
+//     invalidAge.push(i);
+//   }
+// }
+// return invalidAge;
+//  };
+
+
+//  console.log(getAdultUsers(users));
+// // [
+// //   { name: "Bohdan", age: 27 },
+// //   { name: "John", age: 32 },
+// //   { name: "Mark", age: 19 }
+// // ]
+
+// console.log(getAdultUsers([
+//   { name: "Alex", age: 16 },
+//   { name: "Anna", age: 15 }
+// ]));
+// // []
+
+
+
+// const products = [
+//   { name: "Monstera", category: "Plants", price: 80 },
+//   { name: "Rose", category: "Flowers", price: 25 },
+//   { name: "Cactus", category: "Plants", price: 40 },
+//   { name: "Tulip", category: "Flowers", price: 15 },
+//   { name: "Palm", category: "Plants", price: 100 }
+// ];
+
+// function getProductsByCategory(products, category){
+// const invalidproduct = [];
+
+// for (const i of products) {
+//   if (i.category === category) {
+//     invalidproduct.push(i)
+//   }
+// }
+// return invalidproduct;
+// };
+
+
+// console.log(getProductsByCategory(products, "Plants"));
+// // Monstera, Cactus, Palm
+
+// console.log(getProductsByCategory(products, "Flowers"));
+// // Rose, Tulip
+
+// console.log(getProductsByCategory(products, "Furniture"));
+// // []
+
+
+// const cart = [
+//   { name: "Monstera", price: 80, quantity: 2 },
+//   { name: "Cactus", price: 25, quantity: 3 },
+//   { name: "Orchid", price: 120, quantity: 1 }
+// ];
+
+
+// function calculateCartTotal(cart){
+// let totalCart = 0;
+// for (let i of cart) {
+//  totalCart += i.price * i.quantity;
+    
+  
+// }
+// return totalCart;
+// };
+
+// console.log(calculateCartTotal(cart));
+// // 355
+
+// console.log(calculateCartTotal([
+//   { name: "Rose", price: 10, quantity: 5 },
+//   { name: "Tulip", price: 20, quantity: 2 }
+// ]));
+// // 90
+
+// console.log(calculateCartTotal([]));
+// // 0
+
+
+// const user = {
+//   name: "Bohdan",
+//   age: 27,
+//   city: "Odesa",
+//   profession: "Developer"
+// };
+
+// function countProperties(user){
+//    const keys = Object.keys(user);
+
+// return keys.length;
+// };
+ 
+// console.log(countProperties(user));
+// // 4
+
+// console.log(countProperties({
+//   name: "Alex",
+//   age: 25
+// }));
+// // 2
+
+// console.log(countProperties({}));
+// // 0
+
+
+// const product = {
+//   name: "Monstera",
+//   price: 80,
+//   quantity: 5,
+//   category: "Plants"
+// };
+
+// function getPropertyValues(product){
+// const value = Object.values(product);
+// return value;
+
+
+// };
+// console.log(getPropertyValues(product));
+// // ["Monstera", 80, 5, "Plants"]
+
+// console.log(getPropertyValues({
+//   name: "Cactus",
+//   price: 25
+// }));
+// // ["Cactus", 25]
+
+// console.log(getPropertyValues({}));
+// // []
+
+
+// const user = {
+//   name: "Bohdan",
+//   age: 27,
+//   city: "Odesa"
+// };
+
+// function getUserData(user){
+// const keys = Object.keys(user);
+
+
+// const values = Object.values(user);
+
+//  const concatMasiwe = [keys, values];
+
+// return concatMasiwe;
+
+
+
+
+// };
+// console.log(getUserData(user));
+// // [["name", "age", "city"], ["Bohdan", 27, "Odesa"]]
+
+// console.log(getUserData({
+//   product: "Laptop",
+//   price: 1200
+// }));
+// // [["product", "price"], ["Laptop", 1200]]
+
+// console.log(getUserData({}));
+// // [[], []]
+
+
+
+// const prices = {
+//   Monstera: 80,
+//   Cactus: 25,
+//   Orchid: 120,
+//   Rose: 15
+// };
+
+// function getTotalPrice(prices){
+// let value = Object.values(prices);
+
+// let total = 0 ;
+// for (let i of value) {
+// total += i;
+// }
+
+// return total;
+// }
+
+// console.log(getTotalPrice(prices));
+// // 240
+
+// console.log(getTotalPrice({
+//   Laptop: 1200,
+//   Mouse: 50,
+//   Keyboard: 100
+// }));
+// // 1350
+
+// console.log(getTotalPrice({}));
+// // 0
+
+function isEnoughCapacity(products, containerSize){
+const value = Object.values(products);
+let productSize = 0;
+
+for (const product of value) {
+  productSize += product;
+  
+}
+return productSize <= containerSize;
+
+
+
+
+
+
+};
+console.log(
+  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
+); // true
+
+console.log(
+  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
+); // false
+
+console.log(
+  isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
+); // true
+
+console.log(
+  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
+); // false
+
+
+
+function calcAverageCalories(days){
+
+if (days.length === 0 ) {
+  return 0;
+}
+
+
+let totalCalories = 0;
+
+for (const day of days) {
+  totalCalories += day.calories;
+}
+return totalCalories / days.length
+
+
 };
 
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 3010 },
+    { day: "tuesday", calories: 3200 },
+    { day: "wednesday", calories: 3120 },
+    { day: "thursday", calories: 2900 },
+    { day: "friday", calories: 3450 },
+    { day: "saturday", calories: 3280 },
+    { day: "sunday", calories: 3300 }
+  ])
+); // 3180
+
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 2040 },
+    { day: "tuesday", calories: 2270 },
+    { day: "wednesday", calories: 2420 },
+    { day: "thursday", calories: 1900 },
+    { day: "friday", calories: 2370 },
+    { day: "saturday", calories: 2280 },
+    { day: "sunday", calories: 2610 }
+  ])
+); // 2270
+
+console.log(
+  calcAverageCalories([])
+); // 0
 
 
-console.log(getExpensiveProducts(products, 50));
-// [
-//   { name: "Monstera", price: 80 },
-//   { name: "Orchid", price: 120 }
-// ]
 
-console.log(getExpensiveProducts(products, 100));
-// [
-//   { name: "Orchid", price: 120 }
-// ]
 
-console.log(getExpensiveProducts(products, 150));
-// []
+const profile = {
+    username: "Jacob",
+  playTime: 300,
+
+changeUsername(newName){
+
+this.username = newName;
+
+
+
+},
+
+updatePlayTime(hours){
+
+this.playTime += hours;
+},
+
+
+getInfo(){
+return `${this.username} has ${this.playTime} active hours!`;
+}
+
+};
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
+
