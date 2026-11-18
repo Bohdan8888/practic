@@ -1060,3 +1060,470 @@
 
 
 
+// function countPositiveNumbers(numbers){
+// let count = 0;
+
+// for (const number of numbers) {
+//     if (number > 0) {
+//         count++;
+//     }
+// }
+// return count;
+
+
+// };
+
+// console.log(countPositiveNumbers([1, -2, 5, -8, 10]));
+// // 3
+
+// console.log(countPositiveNumbers([-1, -5, -10]));
+// // 0
+
+// console.log(countPositiveNumbers([2, 4, 6]));
+// // 3
+
+
+// function findMaxNumber(numbers){
+// let maxNumber = -Infinity;
+
+// for (const number of numbers) {
+ 
+//     if (number > maxNumber) {
+//        maxNumber = number;
+//     }
+// }
+
+// return maxNumber;
+
+// };
+
+
+// console.log(findMaxNumber([5, 10, 3, 25, 8]));
+// // 25
+
+// console.log(findMaxNumber([100, 50, 200, 30]));
+// // 200
+
+// console.log(findMaxNumber([-5, -2, -10]));
+// // -2
+
+// console.log(findMaxNumber([7]));
+// // 7
+
+
+// function countOccurrences(numbers, target){
+// let count = 0;
+// for (const number of numbers) {
+//      if (number === target) {
+//         count++
+//      }
+// }
+
+// return count;
+// };
+
+// console.log(countOccurrences([1, 2, 3, 2, 4, 2], 2));
+// // 3
+
+// console.log(countOccurrences([5, 5, 5, 5], 5));
+// // 4
+
+// console.log(countOccurrences([1, 3, 5], 2));
+// // 0
+
+// console.log(countOccurrences([], 10));
+// // 0
+
+
+
+// const users = [
+//   { name: "Bohdan", isActive: true },
+//   { name: "Alex", isActive: false },
+//   { name: "John", isActive: true },
+//   { name: "Anna", isActive: false },
+//   { name: "Mark", isActive: true }
+// ];
+
+
+// function getActiveUsers(users){
+// const activeUser = [];
+// for (const user of users) {
+//     if (user.isActive === true) {
+//        activeUser.push(user)
+//     }
+// }
+// return  activeUser;
+// };
+
+// console.log(getActiveUsers(users));
+// // Bohdan, John, Mark
+
+// console.log(getActiveUsers([
+//   { name: "Alex", isActive: false },
+//   { name: "Anna", isActive: false }
+// ]));
+// // []
+
+// console.log(getActiveUsers([]));
+// // []
+
+
+
+// const users = [
+//   { name: "Bohdan", age: 27 },
+//   { name: "Alex", age: 16 },
+//   { name: "John", age: 32 },
+//   { name: "Anna", age: 22 }
+// ];
+
+// function findUser(users, userName){
+
+
+
+
+
+// for (const user of users) {
+    
+//     if (user.name === userName) {
+//   return user;
+//     }
+// }
+
+//    return null;
+
+
+// };
+
+
+// console.log(findUser(users, "John"));
+// // { name: "John", age: 32 }
+
+// console.log(findUser(users, "Bohdan"));
+// // { name: "Bohdan", age: 27 }
+
+// console.log(findUser(users, "Mark"));
+// // null
+
+// console.log(findUser([], "Alex"));
+// // null
+
+
+
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 },
+//   { name: "Rose", price: 15 }
+// ];
+
+// function findMostExpensiveProduct(products){
+// let maxPrice = -Infinity;
+// let expensiveProduct = null;
+
+// for (const product of products) {
+    
+//     if (product.price > maxPrice) {
+//         maxPrice = product.price;
+//         expensiveProduct = product;
+//     }
+// }
+// return expensiveProduct;
+
+// };
+
+
+// console.log(findMostExpensiveProduct(products));
+// // { name: "Orchid", price: 120 }
+
+// console.log(findMostExpensiveProduct([
+//   { name: "Laptop", price: 1200 },
+//   { name: "Mouse", price: 50 }
+// ]));
+// // { name: "Laptop", price: 1200 }
+
+
+// const products = [
+//   { name: "Monstera", price: 80, discount: true },
+//   { name: "Cactus", price: 25, discount: false },
+//   { name: "Orchid", price: 120, discount: true },
+//   { name: "Rose", price: 15, discount: false }
+// ];
+
+// function getDiscountedProducts(products){
+// let productDiscount = [];
+
+// for (const product of products) {
+//     if (product.discount === true) {
+//         productDiscount.push(product)
+//     }
+// }
+// return productDiscount;
+
+
+// };
+// console.log(getDiscountedProducts(products));
+// // Monstera и Orchid
+
+// console.log(getDiscountedProducts([
+//   { name: "Laptop", price: 1200, discount: false },
+//   { name: "Mouse", price: 50, discount: false }
+// ]));
+// // []
+
+// console.log(getDiscountedProducts([]));
+// // [] 
+
+
+// const users = [
+//   { name: "Bohdan", age: 27 },
+//   { name: "Alex", age: 16 },
+//   { name: "John", age: 32 },
+//   { name: "Mark", age: 19 },
+//   { name: "Anna", age: 15 }
+// ];
+
+// function getUsersByAge(users, minAge){
+// let ageValid = [];
+
+// for (const user of users) {
+//     if (user.age >= minAge) {
+//         ageValid.push(user)
+//     }
+// }
+// return ageValid;
+
+
+// };
+
+// console.log(getUsersByAge(users, 18));
+// // Bohdan, John, Mark
+
+// console.log(getUsersByAge(users, 30));
+// // John
+
+// console.log(getUsersByAge(users, 40));
+// // []
+
+// console.log(getUsersByAge([], 18));
+// // []
+
+
+
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 },
+//   { name: "Rose", price: 15 }
+// ];
+
+
+// function findProduct(products, productName){
+// for (const product of products) {
+//     if (product.name === productName) {
+//         return product;
+//     }
+// }
+// return null;
+
+// };
+
+
+// console.log(findProduct(products, "Orchid"));
+// // { name: "Orchid", price: 120 }
+
+// console.log(findProduct(products, "Cactus"));
+// // { name: "Cactus", price: 25 }
+
+// console.log(findProduct(products, "Palm"));
+// // null
+
+// console.log(findProduct([], "Rose"));
+// // null
+
+
+
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 },
+//   { name: "Rose", price: 15 },
+//   { name: "Palm", price: 90 }
+// ];
+
+
+// function findFirstExpensiveProduct(products, minPrice){
+
+// for (const product of products) {
+//     if (product.price > minPrice) {
+//         return product;
+//     }
+// }
+
+// return null;
+
+// };
+
+
+// console.log(findFirstExpensiveProduct(products, 50));
+// // { name: "Monstera", price: 80 }
+
+// console.log(findFirstExpensiveProduct(products, 100));
+// // { name: "Orchid", price: 120 }
+
+// console.log(findFirstExpensiveProduct(products, 150));
+// // null
+
+// console.log(findFirstExpensiveProduct([], 50));
+// // null
+
+
+
+// const numbers = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+
+
+//  function getAllNumbers(numbers){
+// let newMasive = [];
+// for (const number of numbers) {
+//     newMasive.push(...number);
+// }
+
+// return newMasive;
+
+//  };
+
+
+//  console.log(getAllNumbers([[1, 2], [3, 4]]));
+// // [1, 2, 3, 4]
+
+// console.log(getAllNumbers([[5, 6], [7, 8], [9]]));
+// // [5, 6, 7, 8, 9]
+
+// console.log(getAllNumbers([]));
+// // []
+
+
+// function mergeArrays(first, second){
+// let totalMasive = [...first, ...second];
+// return totalMasive;
+
+
+// };
+
+// console.log(mergeArrays([1, 2], [3, 4]));
+// // [1, 2, 3, 4]
+
+// console.log(mergeArrays(["A", "B"], ["C"]));
+// // ["A", "B", "C"]
+
+// console.log(mergeArrays([], [10, 20]));
+// // [10, 20]
+
+// console.log(mergeArrays([5, 6], []));
+// // [5, 6]
+
+
+// const user = {
+//   name: "Bohdan",
+//   age: 27,
+//   city: "Odesa"
+// };
+// function updateUser(user, newAge){
+// const updatedUser = {
+//     ...user,
+//     age: newAge
+// };
+// return updatedUser;
+// }
+
+
+
+// const updatedUser = updateUser(user, 28);
+
+// console.log(updatedUser);
+// // { name: "Bohdan", age: 28, city: "Odesa" }
+
+// console.log(user);
+// // { name: "Bohdan", age: 27, city: "Odesa" }
+
+
+// const product = {
+//   name: "Monstera",
+//   price: 80
+// };
+
+// function addCategory(product, category){
+// const newCategory = {
+// ...product,
+// category: category
+
+
+// };
+
+// return newCategory;
+// };
+
+
+// console.log(addCategory(product, "Plants"));
+// // { name: "Monstera", price: 80, category: "Plants" }
+
+// console.log(product);
+// // { name: "Monstera", price: 80 }
+
+
+// function calculateSum(...numbers){
+
+// let newNumber = 0;
+
+//     for (const number of numbers) {
+//         newNumber += number
+//     }
+//     return newNumber;
+// };
+// console.log(calculateSum(10, 20));
+// // 30
+
+// console.log(calculateSum(5, 10, 15));
+// // 30
+
+// console.log(calculateSum(1, 2, 3, 4, 5));
+// // 15
+
+// console.log(calculateSum());
+// // 0
+
+
+
+// function showFirstAndRest(first, ...others){
+
+
+// return {first, others};
+// };
+
+// console.log(showFirstAndRest("Bohdan", 27, "Odesa"));
+// // { first: "Bohdan", others: [27, "Odesa"] }
+
+// console.log(showFirstAndRest("Alex", 25, "Kyiv", true));
+// // { first: "Alex", others: [25, "Kyiv", true] }
+
+// console.log(showFirstAndRest("John"));
+// // { first: "John", others: [] }
+
+// const fruits = ["apple", "banana", "orange", "pear", "kiwi"];
+
+// function getFirstAndRemaining(fruits){
+
+// const [first, ...remaining] = fruits;
+// return {first, remaining}
+
+// };
+
+
+// console.log(getFirstAndRemaining(["apple", "banana", "orange"]));
+// // { first: "apple", remaining: ["banana", "orange"] }
+
+// console.log(getFirstAndRemaining(["Monstera", "Cactus"]));
+// // { first: "Monstera", remaining: ["Cactus"] }
