@@ -1535,178 +1535,178 @@
 
 
 
-const getUserNames = (users) =>{
+// const getUserNames = (users) =>{
 
 
 
-let  userName = [];
-for (const user of users) {
-   userName.push(user.name);
-}
-return userName;
+// let  userName = [];
+// for (const user of users) {
+//    userName.push(user.name);
+// }
+// return userName;
 
-}; 
+// }; 
 
-console.log(
-  getUserNames([
-    {
-      name: "Moore Hensley",
-      email: "moorehensley@indexia.com",
-      balance: 2811
-    },
-    {
-      name: "Sharlene Bush",
-      email: "sharlenebush@tubesys.com",
-      balance: 3821
-    },
-    {
-      name: "Ross Vazquez",
-      email: "rossvazquez@xinware.com",
-      balance: 3793
-    },
-    {
-      name: "Elma Head",
-      email: "elmahead@omatom.com",
-      balance: 2278
-    },
-    {
-      name: "Carey Barr",
-      email: "careybarr@nurali.com",
-      balance: 3951
-    },
-    {
-      name: "Blackburn Dotson",
-      email: "blackburndotson@furnigeer.com",
-      balance: 1498
-    },
-    {
-      name: "Sheree Anthony",
-      email: "shereeanthony@kog.com",
-      balance: 2764
-    }
-  ])
-); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
-
-
-
-
-const getUsersWithFriend = (users, friendName) => {
-
-
-  return users.filter(user => user.friends.includes(friendName));
+// console.log(
+//   getUserNames([
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       balance: 2811
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       balance: 3821
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       balance: 3793
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       balance: 2278
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       balance: 3951
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       balance: 1498
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       balance: 2764
+//     }
+//   ])
+// ); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 
 
 
-};
+
+// const getUsersWithFriend = (users, friendName) => {
+
+
+//   return users.filter(user => user.friends.includes(friendName));
 
 
 
-//////////////////////////////////////////////////////////////////
+// };
 
-const allUsers = [
-  {
-    name: "Moore Hensley",
-    friends: ["Sharron Pace"]
-  },
-  {
-    name: "Sharlene Bush",
-    friends: ["Briana Decker", "Sharron Pace"]
-  },
-  {
-    name: "Ross Vazquez",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"]
-  },
-  {
-    name: "Elma Head",
-    friends: ["Goldie Gentry", "Aisha Tran"]
-  },
-  {
-    name: "Carey Barr",
-    friends: ["Jordan Sampson", "Eddie Strong"]
-  },
-  {
-    name: "Blackburn Dotson",
-    friends: ["Jacklyn Lucas", "Linda Chapman"]
-  },
-  {
-    name: "Sheree Anthony",
-    friends: ["Goldie Gentry", "Briana Decker"]
-  }
-];
 
-console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
-// [
+
+// //////////////////////////////////////////////////////////////////
+
+// const allUsers = [
+//   {
+//     name: "Moore Hensley",
+//     friends: ["Sharron Pace"]
+//   },
 //   {
 //     name: "Sharlene Bush",
 //     friends: ["Briana Decker", "Sharron Pace"]
 //   },
 //   {
-//     name: "Sheree Anthony",
-//     friends: ["Goldie Gentry", "Briana Decker"]
-//   }
-// ]
-
-console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
-// [
+//     name: "Ross Vazquez",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"]
+//   },
 //   {
 //     name: "Elma Head",
 //     friends: ["Goldie Gentry", "Aisha Tran"]
 //   },
 //   {
+//     name: "Carey Barr",
+//     friends: ["Jordan Sampson", "Eddie Strong"]
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"]
+//   },
+//   {
 //     name: "Sheree Anthony",
 //     friends: ["Goldie Gentry", "Briana Decker"]
 //   }
-// ]
+// ];
 
-console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
+// console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
+// // [
+// //   {
+// //     name: "Sharlene Bush",
+// //     friends: ["Briana Decker", "Sharron Pace"]
+// //   },
+// //   {
+// //     name: "Sheree Anthony",
+// //     friends: ["Goldie Gentry", "Briana Decker"]
+// //   }
+// // ]
+
+// console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
+// // [
+// //   {
+// //     name: "Elma Head",
+// //     friends: ["Goldie Gentry", "Aisha Tran"]
+// //   },
+// //   {
+// //     name: "Sheree Anthony",
+// //     friends: ["Goldie Gentry", "Briana Decker"]
+// //   }
+// // ]
+
+// console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
 
 ///////////////////////////////////////////////////////////
 
-const sortByDescendingFriendCount = (users) =>{
+// const sortByDescendingFriendCount = (users) =>{
 
-return users.toSorted((a, b) => b.friends.length - a.friends.length);
+// return users.toSorted((a, b) => b.friends.length - a.friends.length);
 
-};
+// };
 
-console.log(
-  sortByDescendingFriendCount([
-    {
-      name: "Moore Hensley",
-      friends: ["Sharron Pace"],
-      gender: "male"
-    },
-    {
-      name: "Sharlene Bush",
-      friends: ["Briana Decker", "Sharron Pace"],
-      gender: "female"
-    },
-    {
-      name: "Ross Vazquez",
-      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-      gender: "male"
-    },
-    {
-      name: "Elma Head",
-      friends: ["Goldie Gentry", "Aisha Tran"],
-      gender: "female"
-    },
-    {
-      name: "Carey Barr",
-      friends: ["Jordan Sampson", "Eddie Strong"],
-      gender: "male"
-    },
-    {
-      name: "Blackburn Dotson",
-      friends: ["Jacklyn Lucas", "Linda Chapman"],
-      gender: "male"
-    },
-    {
-      name: "Sheree Anthony",
-      friends: ["Goldie Gentry", "Briana Decker"],
-      gender: "female"
-    }
-  ])
-);
+// console.log(
+//   sortByDescendingFriendCount([
+//     {
+//       name: "Moore Hensley",
+//       friends: ["Sharron Pace"],
+//       gender: "male"
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       gender: "female"
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       gender: "male"
+//     },
+//     {
+//       name: "Elma Head",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       gender: "female"
+//     },
+//     {
+//       name: "Carey Barr",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       gender: "male"
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       gender: "male"
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       gender: "female"
+//     }
+//   ])
+// );
 // [
 //   {
 //     name: "Ross Vazquez",
@@ -1748,49 +1748,166 @@ console.log(
 ///////////////////////////////////////////////////////////////////////////////////^
 
 
-const getTotalBalanceByGender = (users, gender) => {
-  return users
-    .filter(user => user.gender === gender)
-    .map(user => user.balance)
-    .reduce((total, balance) => total + balance, 0);
-};
-const clients = [
-  {
-    name: "Moore Hensley",
-    gender: "male",
-    balance: 2811
-  },
-  {
-    name: "Sharlene Bush",
-    gender: "female",
-    balance: 3821
-  },
-  {
-    name: "Ross Vazquez",
-    gender: "male",
-    balance: 3793
-  },
-  {
-    name: "Elma Head",
-    gender: "female",
-    balance: 2278
-  },
-  {
-    name: "Carey Barr",
-    gender: "male",
-    balance: 3951
-  },
-  {
-    name: "Blackburn Dotson",
-    gender: "male",
-    balance: 1498
-  },
-  {
-    name: "Sheree Anthony",
-    gender: "female",
-    balance: 2764
-  }
-];
+// const getTotalBalanceByGender = (users, gender) => {
+//   return users
+//     .filter(user => user.gender === gender)
+//     .map(user => user.balance)
+//     .reduce((total, balance) => total + balance, 0);
+// };
+// const clients = [
+//   {
+//     name: "Moore Hensley",
+//     gender: "male",
+//     balance: 2811
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     gender: "female",
+//     balance: 3821
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     gender: "male",
+//     balance: 3793
+//   },
+//   {
+//     name: "Elma Head",
+//     gender: "female",
+//     balance: 2278
+//   },
+//   {
+//     name: "Carey Barr",
+//     gender: "male",
+//     balance: 3951
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     gender: "male",
+//     balance: 1498
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     gender: "female",
+//     balance: 2764
+//   }
+// ];
 
-console.log(getTotalBalanceByGender(clients, "male")); // 12053
-console.log(getTotalBalanceByGender(clients, "female")); // 8863
+// console.log(getTotalBalanceByGender(clients, "male")); // 12053
+// console.log(getTotalBalanceByGender(clients, "female")); // 8863
+// let apple = 30;
+// let grape = 100;
+// let total = apple += grape;
+//  console.log(`total fruit = ${total}`);
+
+
+// const products = [
+//   { name: "Monstera", price: 80, discount: true },
+//   { name: "Cactus", price: 25, discount: false },
+//   { name: "Orchid", price: 120, discount: true },
+//   { name: "Rose", price: 15, discount: false },
+//   { name: "Palm", price: 90, discount: true }
+// ];
+
+
+
+
+
+//  const getDiscountTotal = (products) => {
+  
+//   const total = products
+  
+//   .filter(product => product.discount === true)
+//   .map(product => product.price)
+//   .reduce((total, price) => total + price, 0);
+//   return total;
+//  };
+
+
+//  console.log(getDiscountTotal(products));
+// // 290
+
+// console.log(getDiscountTotal([
+//   { name: "Laptop", price: 1000, discount: false },
+//   { name: "Mouse", price: 50, discount: true }
+// ]));
+// // 50
+
+// console.log(getDiscountTotal([]));
+// // 0
+
+
+
+// const users = [
+//   { name: "Bohdan", balance: 1200, isActive: true },
+//   { name: "Alex", balance: 800, isActive: false },
+//   { name: "John", balance: 2000, isActive: true },
+//   { name: "Anna", balance: 1000, isActive: true }
+// ];
+
+// const getAverageActiveBalance = (users) =>{
+// const activeUser = users.filter(user => user.isActive === true);
+
+
+// const totalBalance = activeUser 
+// .map(user => user.balance)
+// .reduce((total, balance) => total + balance, 0)
+
+// return activeUser.length === 0 ? 0 : 
+// totalBalance / activeUser.length;
+
+// };
+
+
+// console.log(getAverageActiveBalance(users));
+// // 1400
+
+// console.log(getAverageActiveBalance([
+//   { name: "Alex", balance: 500, isActive: false },
+//   { name: "John", balance: 1500, isActive: true }
+// ]));
+// // 1500
+
+// console.log(getAverageActiveBalance([]));
+// // 0
+
+
+// const products = [
+//   { name: "Monstera", price: 80, isAvailable: true },
+//   { name: "Cactus", price: 25, isAvailable: false },
+//   { name: "Orchid", price: 120, isAvailable: true },
+//   { name: "Rose", price: 40, isAvailable: false },
+//   { name: "Palm", price: 100, isAvailable: true }
+// ];
+
+// const getAveragePrice = (products) =>{
+
+
+// const newAverage =  products.filter(product => product.isAvailable);
+// const totalPrice = newAverage
+// .map(product => product.price)
+// .reduce ((total, price) => total + price, 0);
+
+// return totalPrice === 0 ? 0 : totalPrice / newAverage.length;
+
+
+
+// }
+
+
+
+// console.log(getAveragePrice(products));
+// // 100
+
+// console.log(getAveragePrice([
+//   { name: "Laptop", price: 1000, isAvailable: true },
+//   { name: "Mouse", price: 100, isAvailable: false }
+// ]));
+// // 1000
+
+// console.log(getAveragePrice([
+//   { name: "Keyboard", price: 200, isAvailable: false }
+// ]));
+// // 0
+
+// console.log(getAveragePrice([]));
+// // 0
