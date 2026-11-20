@@ -7,13 +7,11 @@
 
 // const { use } = require("react");
 
-
 // };
 // console.log(checkAge(20)); // "Access granted"
 // console.log(checkAge(17)); // "Access denied"
 // console.log(checkAge(18)); // "Access granted"
 // console.log(checkAge(12)); // "Access denied"
-
 
 // function canPurchase(isAvailable, quantity, isBlocked){
 
@@ -31,16 +29,14 @@
 // console.log(canPurchase(true, 5, true));   // false
 // console.log(canPurchase(false, 0, true));  // false
 
-
 // function normalizeInput(input, to){
- 
+
 // if (to === "upper") {
 //     return input.toUpperCase();
 // } else {
 //     return input.toLowerCase();
 // }
 // };
-
 
 // console.log(normalizeInput("Hello World", "upper"));
 // // "HELLO WORLD"
@@ -60,13 +56,12 @@
 
 // return lowerCaseFullName.includes(lowerCaseFirstName);
 
-
 // };
 // console.log(checkForName("Bohdan Sharyha", "Bohdan")); // true
 // console.log(checkForName("Bohdan Sharyha", "bohdan")); // true
 // console.log(checkForName("Bohdan Sharyha", "Alex"));   // false
 // console.log(checkForName("John Smith", "JOHN"));       // true
-// console.log(checkForName("John Smith", "Peter"));  
+// console.log(checkForName("John Smith", "Peter"));
 //     // false
 
 // function checkFileExtension(fileName, ext){
@@ -81,14 +76,12 @@
 // console.log(checkFileExtension("styles.css", ".js"));
 // console.log(checkFileExtension("app.js", ".js"));
 
-
 // function checkImage (fileName){
 // if (fileName.endsWith(".jpg")) {
 //     return "Valid image";
 // } else {
 //     return "Invalid image";
 // }
-
 
 // } ;
 // console.log(checkImage("monstera.jpg"));
@@ -101,8 +94,6 @@
 // // "Valid image"
 
 // console.log(checkImage("photo.pdf"));
-
-
 
 // // "Invalid image"
 
@@ -127,7 +118,6 @@
 // console.log(checkUsername("guest_123"));
 // // "Username is invalid"
 
-
 // function  checkForWord(message, word){
 //     if (message.includes(word)) {
 //         return true;
@@ -147,8 +137,6 @@
 // console.log(checkForWord("Monstera is beautiful", "rose"));
 // // false
 
-
-
 // function createUsername(username){
 //     return username.trim()
 // };
@@ -164,7 +152,6 @@
 // console.log(createUsername("John"));
 // // "John"
 
-
 // function  getFileName(file){
 //     const dotIndex = file.indexOf(".");
 // if (dotIndex !== -1) {
@@ -178,7 +165,6 @@
 // console.log(getFileName("index.html")); // "index"
 // console.log(getFileName("app"));        // "app"
 // console.log(getFileName("index"));      // "index"
-
 
 // function checkForSpam(message){
 // message = message.toLowerCase(message);
@@ -200,7 +186,6 @@
 // console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
 // console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 
-
 // function getShippingCost(country, price){
 // switch (country) {
 //     case "Australia":
@@ -214,7 +199,7 @@
 //                 return `Shipping to ${country} will cost 120 credits`;
 //     default:
 //         return "Sorry, there is no delivery to your country";
-    
+
 // }
 // };
 
@@ -224,9 +209,6 @@
 // console.log(getShippingCost("Chile")); // "Shipping to Chile will cost 250 credits"
 // console.log(getShippingCost("Jamaica")); // "Shipping to Jamaica will cost 120 credits"
 // console.log(getShippingCost("Sweden")); // "Sorry, there is no delivery to your country"
-
-
-
 
 // function slugify(title){
 // const toLower = title.toLowerCase();
@@ -240,9 +222,6 @@
 // console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
 // console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
 
-
-
-
 // function makeArray(firstArray, secondArray, maxLength){
 // const newArrey = firstArray.concat(secondArray);
 
@@ -254,14 +233,12 @@
 
 // };
 
-
 // console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
 // console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
 // console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
 // console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
 // console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
 // console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
-
 
 // function filterArray(numbers, value) {
 //   const filteredNumbers = [];
@@ -275,18 +252,11 @@
 //   return filteredNumbers;
 // };
 
-
-
-
 // console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
 // console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
 // console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
 // console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
 // console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
-
-
-
-
 
 //  function slugify(title){
 //    const titleLowercase = title.toLowerCase();
@@ -303,8 +273,6 @@
 // console.log(slugify("FRONTEND DEVELOPER"));
 // // "frontend-developer"
 
-
-
 // function makeSlug(title, separator){
 //   const lowerCaseTitle = title.toLowerCase();
 //   const sliceTitle = lowerCaseTitle.split(" ");
@@ -313,8 +281,6 @@
 // return joinTitle;
 
 // }
-
-
 
 // console.log(makeSlug("Hello World", "_"));
 // // "hello_world"
@@ -326,14 +292,12 @@
 
 // // "my.new.project"
 
-
 // function createSlug(title){
 // const trimTitle = title.trim();
 // const lowerTitle = trimTitle.toLowerCase();
 // const splitTitle =lowerTitle.split(" ");
 // const joinTitle = splitTitle.join("-");
 // return joinTitle;
-
 
 // }
 // console.log(createSlug("  HELLO MY FRIEND  "));
@@ -345,8 +309,6 @@
 // console.log(createSlug("  MY FIRST PROJECT  "));
 
 // // "my-first-project"
-
-
 
 // function countWords(text){
 // const splitText = text.split(" ");
@@ -376,8 +338,6 @@
 // console.log(getFirstTwoWords("React Developer Course"));
 // // "React Developer"
 
-
-
 // function formatTitle(title){
 //   const lowerTitle = title.toLowerCase();
 //   const splitTitle = lowerTitle.split(" ");
@@ -397,16 +357,13 @@
 // console.log(formatTitle("FRONTEND DEVELOPER"));
 // // "frontend_developer"
 
-
-
-
 // function createShortSlug(title, maxLength){
 //   const lowerTitle = title.toLowerCase();
 //   const splitTitle = lowerTitle.split(" ");
 //   const joinTitle = splitTitle.join("-");
 
 //   if (joinTitle.length > maxLength) {
-    
+
 //     return  joinTitle.slice(0, maxLength);
 //   } else {
 //     return joinTitle;
@@ -423,9 +380,6 @@
 
 // console.log(createShortSlug("My First Project", 7));
 // // "my-firs"
-
-
-
 
 // function shortenDescription(description, maxLength){
 
@@ -447,9 +401,6 @@
 
 // console.log(shortenDescription("Hello World", 11));
 // // "hello world"
-
-
-
 
 // function prepareTitle(title, maxLength){
 // const lowerTitile = title.toLowerCase();
@@ -474,7 +425,6 @@
 // console.log(prepareTitle("  JavaScript Developer  ", 17));
 // // "javascript-develo"
 
-
 // function getOddNumbers(numbers){
 //    const newNumber = [];
 //    for(let i = 0; i < numbers.length; i++){
@@ -497,10 +447,6 @@
 // console.log(getOddNumbers([7, 9, 11]));
 // // [7, 9, 11]
 
-
-
-
-
 //   const user = {
 //   name: "Bohdan",
 //   age: 27,
@@ -512,15 +458,11 @@
 //    return user;
 //   }
 
-
 // console.log(updateAge(user, 28));
 // // { name: "Bohdan", age: 28, city: "Odesa" }
 
 // console.log(updateAge(user, 30));
 // // { name: "Bohdan", age: 30, city: "Odesa" }
-
-
-
 
 // const product = {
 //   name: "Monstera",
@@ -569,13 +511,11 @@
 // }));
 // // "Product unavailable"
 
-
 // const cart = {
 //   items: 3,
 //   price: 40,
 //   discount: 20
 // };
-
 
 // function calculateCartTotal(cart){
 // return cart.items * cart.price - cart.discount;
@@ -618,7 +558,6 @@
 // console.log(getProductNames(products));
 // // ["Monstera", "Cactus", "Orchid"]
 
-
 // const products = [
 //   { name: "Monstera", price: 80 },
 //   { name: "Cactus", price: 25 },
@@ -645,8 +584,6 @@
 // console.log(getTotalPrice([]));
 // // 0
 
-
-
 // const products = [
 //   { name: "Monstera", price: 80 },
 //   { name: "Cactus", price: 25 },
@@ -663,8 +600,6 @@
 //   return newPprice;
 // };
 
-
-
 // console.log(getExpensiveProducts(products, 50));
 // // [
 // //   { name: "Monstera", price: 80 },
@@ -678,7 +613,6 @@
 
 // console.log(getExpensiveProducts(products, 150));
 // // []
-
 
 // function calculateTotal(price){
 // let calculatePrice = 0;
@@ -713,7 +647,6 @@
 // return newArrea;
 // };
 
-
 // console.log(getAffordableProducts(products, 80));
 // // Monstera, Cactus, Rose
 
@@ -726,12 +659,6 @@
 // console.log(getAffordableProducts(products, 120));
 // // Все пять товаров
 
-
-
-
-
-
-
 // const users = [
 //   { name: "Bohdan", age: 27 },
 //   { name: "Alex", age: 16 },
@@ -741,7 +668,7 @@
 // ];
 
 //  function getAdultUsers(users){
-  
+
 //   const invalidAge = [];
 
 // for (const i of users) {
@@ -751,7 +678,6 @@
 // }
 // return invalidAge;
 //  };
-
 
 //  console.log(getAdultUsers(users));
 // // [
@@ -765,8 +691,6 @@
 //   { name: "Anna", age: 15 }
 // ]));
 // // []
-
-
 
 // const products = [
 //   { name: "Monstera", category: "Plants", price: 80 },
@@ -787,7 +711,6 @@
 // return invalidproduct;
 // };
 
-
 // console.log(getProductsByCategory(products, "Plants"));
 // // Monstera, Cactus, Palm
 
@@ -797,20 +720,17 @@
 // console.log(getProductsByCategory(products, "Furniture"));
 // // []
 
-
 // const cart = [
 //   { name: "Monstera", price: 80, quantity: 2 },
 //   { name: "Cactus", price: 25, quantity: 3 },
 //   { name: "Orchid", price: 120, quantity: 1 }
 // ];
 
-
 // function calculateCartTotal(cart){
 // let totalCart = 0;
 // for (let i of cart) {
 //  totalCart += i.price * i.quantity;
-    
-  
+
 // }
 // return totalCart;
 // };
@@ -827,7 +747,6 @@
 // console.log(calculateCartTotal([]));
 // // 0
 
-
 // const user = {
 //   name: "Bohdan",
 //   age: 27,
@@ -840,7 +759,7 @@
 
 // return keys.length;
 // };
- 
+
 // console.log(countProperties(user));
 // // 4
 
@@ -853,7 +772,6 @@
 // console.log(countProperties({}));
 // // 0
 
-
 // const product = {
 //   name: "Monstera",
 //   price: 80,
@@ -864,7 +782,6 @@
 // function getPropertyValues(product){
 // const value = Object.values(product);
 // return value;
-
 
 // };
 // console.log(getPropertyValues(product));
@@ -879,7 +796,6 @@
 // console.log(getPropertyValues({}));
 // // []
 
-
 // const user = {
 //   name: "Bohdan",
 //   age: 27,
@@ -889,15 +805,11 @@
 // function getUserData(user){
 // const keys = Object.keys(user);
 
-
 // const values = Object.values(user);
 
 //  const concatMasiwe = [keys, values];
 
 // return concatMasiwe;
-
-
-
 
 // };
 // console.log(getUserData(user));
@@ -911,8 +823,6 @@
 
 // console.log(getUserData({}));
 // // [[], []]
-
-
 
 // const prices = {
 //   Monstera: 80,
@@ -951,14 +861,9 @@
 
 // for (const product of value) {
 //   productSize += product;
-  
+
 // }
 // return productSize <= containerSize;
-
-
-
-
-
 
 // };
 // console.log(
@@ -977,14 +882,11 @@
 //   isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
 // ); // false
 
-
-
 // function calcAverageCalories(days){
 
 // if (days.length === 0 ) {
 //   return 0;
 // }
-
 
 // let totalCalories = 0;
 
@@ -992,7 +894,6 @@
 //   totalCalories += day.calories;
 // }
 // return totalCalories / days.length
-
 
 // };
 
@@ -1024,9 +925,6 @@
 //   calcAverageCalories([])
 // ); // 0
 
-
-
-
 // const profile = {
 //     username: "Jacob",
 //   playTime: 300,
@@ -1035,15 +933,12 @@
 
 // this.username = newName;
 
-
-
 // },
 
 // updatePlayTime(hours){
 
 // this.playTime += hours;
 // },
-
 
 // getInfo(){
 // return `${this.username} has ${this.playTime} active hours!`;
@@ -1058,8 +953,6 @@
 // profile.updatePlayTime(20);
 // console.log(profile.getInfo()); // "Marco has 320 active hours!"
 
-
-
 // function countPositiveNumbers(numbers){
 // let count = 0;
 
@@ -1069,7 +962,6 @@
 //     }
 // }
 // return count;
-
 
 // };
 
@@ -1082,12 +974,11 @@
 // console.log(countPositiveNumbers([2, 4, 6]));
 // // 3
 
-
 // function findMaxNumber(numbers){
 // let maxNumber = -Infinity;
 
 // for (const number of numbers) {
- 
+
 //     if (number > maxNumber) {
 //        maxNumber = number;
 //     }
@@ -1096,7 +987,6 @@
 // return maxNumber;
 
 // };
-
 
 // console.log(findMaxNumber([5, 10, 3, 25, 8]));
 // // 25
@@ -1109,7 +999,6 @@
 
 // console.log(findMaxNumber([7]));
 // // 7
-
 
 // function countOccurrences(numbers, target){
 // let count = 0;
@@ -1134,8 +1023,6 @@
 // console.log(countOccurrences([], 10));
 // // 0
 
-
-
 // const users = [
 //   { name: "Bohdan", isActive: true },
 //   { name: "Alex", isActive: false },
@@ -1143,7 +1030,6 @@
 //   { name: "Anna", isActive: false },
 //   { name: "Mark", isActive: true }
 // ];
-
 
 // function getActiveUsers(users){
 // const activeUser = [];
@@ -1167,8 +1053,6 @@
 // console.log(getActiveUsers([]));
 // // []
 
-
-
 // const users = [
 //   { name: "Bohdan", age: 27 },
 //   { name: "Alex", age: 16 },
@@ -1178,12 +1062,8 @@
 
 // function findUser(users, userName){
 
-
-
-
-
 // for (const user of users) {
-    
+
 //     if (user.name === userName) {
 //   return user;
 //     }
@@ -1191,9 +1071,7 @@
 
 //    return null;
 
-
 // };
-
 
 // console.log(findUser(users, "John"));
 // // { name: "John", age: 32 }
@@ -1207,8 +1085,6 @@
 // console.log(findUser([], "Alex"));
 // // null
 
-
-
 // const products = [
 //   { name: "Monstera", price: 80 },
 //   { name: "Cactus", price: 25 },
@@ -1221,7 +1097,7 @@
 // let expensiveProduct = null;
 
 // for (const product of products) {
-    
+
 //     if (product.price > maxPrice) {
 //         maxPrice = product.price;
 //         expensiveProduct = product;
@@ -1231,7 +1107,6 @@
 
 // };
 
-
 // console.log(findMostExpensiveProduct(products));
 // // { name: "Orchid", price: 120 }
 
@@ -1240,7 +1115,6 @@
 //   { name: "Mouse", price: 50 }
 // ]));
 // // { name: "Laptop", price: 1200 }
-
 
 // const products = [
 //   { name: "Monstera", price: 80, discount: true },
@@ -1259,7 +1133,6 @@
 // }
 // return productDiscount;
 
-
 // };
 // console.log(getDiscountedProducts(products));
 // // Monstera и Orchid
@@ -1271,8 +1144,7 @@
 // // []
 
 // console.log(getDiscountedProducts([]));
-// // [] 
-
+// // []
 
 // const users = [
 //   { name: "Bohdan", age: 27 },
@@ -1292,7 +1164,6 @@
 // }
 // return ageValid;
 
-
 // };
 
 // console.log(getUsersByAge(users, 18));
@@ -1307,15 +1178,12 @@
 // console.log(getUsersByAge([], 18));
 // // []
 
-
-
 // const products = [
 //   { name: "Monstera", price: 80 },
 //   { name: "Cactus", price: 25 },
 //   { name: "Orchid", price: 120 },
 //   { name: "Rose", price: 15 }
 // ];
-
 
 // function findProduct(products, productName){
 // for (const product of products) {
@@ -1326,7 +1194,6 @@
 // return null;
 
 // };
-
 
 // console.log(findProduct(products, "Orchid"));
 // // { name: "Orchid", price: 120 }
@@ -1340,8 +1207,6 @@
 // console.log(findProduct([], "Rose"));
 // // null
 
-
-
 // const products = [
 //   { name: "Monstera", price: 80 },
 //   { name: "Cactus", price: 25 },
@@ -1349,7 +1214,6 @@
 //   { name: "Rose", price: 15 },
 //   { name: "Palm", price: 90 }
 // ];
-
 
 // function findFirstExpensiveProduct(products, minPrice){
 
@@ -1363,7 +1227,6 @@
 
 // };
 
-
 // console.log(findFirstExpensiveProduct(products, 50));
 // // { name: "Monstera", price: 80 }
 
@@ -1376,14 +1239,11 @@
 // console.log(findFirstExpensiveProduct([], 50));
 // // null
 
-
-
 // const numbers = [
 //   [1, 2, 3],
 //   [4, 5, 6],
 //   [7, 8, 9]
 // ];
-
 
 //  function getAllNumbers(numbers){
 // let newMasive = [];
@@ -1395,7 +1255,6 @@
 
 //  };
 
-
 //  console.log(getAllNumbers([[1, 2], [3, 4]]));
 // // [1, 2, 3, 4]
 
@@ -1405,11 +1264,9 @@
 // console.log(getAllNumbers([]));
 // // []
 
-
 // function mergeArrays(first, second){
 // let totalMasive = [...first, ...second];
 // return totalMasive;
-
 
 // };
 
@@ -1425,7 +1282,6 @@
 // console.log(mergeArrays([5, 6], []));
 // // [5, 6]
 
-
 // const user = {
 //   name: "Bohdan",
 //   age: 27,
@@ -1439,8 +1295,6 @@
 // return updatedUser;
 // }
 
-
-
 // const updatedUser = updateUser(user, 28);
 
 // console.log(updatedUser);
@@ -1448,7 +1302,6 @@
 
 // console.log(user);
 // // { name: "Bohdan", age: 27, city: "Odesa" }
-
 
 // const product = {
 //   name: "Monstera",
@@ -1460,19 +1313,16 @@
 // ...product,
 // category: category
 
-
 // };
 
 // return newCategory;
 // };
-
 
 // console.log(addCategory(product, "Plants"));
 // // { name: "Monstera", price: 80, category: "Plants" }
 
 // console.log(product);
 // // { name: "Monstera", price: 80 }
-
 
 // function calculateSum(...numbers){
 
@@ -1495,10 +1345,7 @@
 // console.log(calculateSum());
 // // 0
 
-
-
 // function showFirstAndRest(first, ...others){
-
 
 // return {first, others};
 // };
@@ -1521,23 +1368,15 @@
 
 // };
 
-
 // console.log(getFirstAndRemaining(["apple", "banana", "orange"]));
 // // { first: "apple", remaining: ["banana", "orange"] }
 
 // console.log(getFirstAndRemaining(["Monstera", "Cactus"]));
 // // { first: "Monstera", remaining: ["Cactus"] }
 
-
-
-
 //////////////////////////////////////////////////////////////////
 
-
-
 // const getUserNames = (users) =>{
-
-
 
 // let  userName = [];
 // for (const user of users) {
@@ -1545,7 +1384,7 @@
 // }
 // return userName;
 
-// }; 
+// };
 
 // console.log(
 //   getUserNames([
@@ -1587,19 +1426,11 @@
 //   ])
 // ); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 
-
-
-
 // const getUsersWithFriend = (users, friendName) => {
-
 
 //   return users.filter(user => user.friends.includes(friendName));
 
-
-
 // };
-
-
 
 // //////////////////////////////////////////////////////////////////
 
@@ -1634,7 +1465,7 @@
 //   }
 // ];
 
-// console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
+// console.log(getUsersWithFriend(allUsers, "Briana Decker"));
 // // [
 // //   {
 // //     name: "Sharlene Bush",
@@ -1747,7 +1578,6 @@
 
 ///////////////////////////////////////////////////////////////////////////////////^
 
-
 // const getTotalBalanceByGender = (users, gender) => {
 //   return users
 //     .filter(user => user.gender === gender)
@@ -1799,7 +1629,6 @@
 // let total = apple += grape;
 //  console.log(`total fruit = ${total}`);
 
-
 // const products = [
 //   { name: "Monstera", price: 80, discount: true },
 //   { name: "Cactus", price: 25, discount: false },
@@ -1808,20 +1637,15 @@
 //   { name: "Palm", price: 90, discount: true }
 // ];
 
-
-
-
-
 //  const getDiscountTotal = (products) => {
-  
+
 //   const total = products
-  
+
 //   .filter(product => product.discount === true)
 //   .map(product => product.price)
 //   .reduce((total, price) => total + price, 0);
 //   return total;
 //  };
-
 
 //  console.log(getDiscountTotal(products));
 // // 290
@@ -1835,8 +1659,6 @@
 // console.log(getDiscountTotal([]));
 // // 0
 
-
-
 // const users = [
 //   { name: "Bohdan", balance: 1200, isActive: true },
 //   { name: "Alex", balance: 800, isActive: false },
@@ -1847,16 +1669,14 @@
 // const getAverageActiveBalance = (users) =>{
 // const activeUser = users.filter(user => user.isActive === true);
 
-
-// const totalBalance = activeUser 
+// const totalBalance = activeUser
 // .map(user => user.balance)
 // .reduce((total, balance) => total + balance, 0)
 
-// return activeUser.length === 0 ? 0 : 
+// return activeUser.length === 0 ? 0 :
 // totalBalance / activeUser.length;
 
 // };
-
 
 // console.log(getAverageActiveBalance(users));
 // // 1400
@@ -1870,7 +1690,6 @@
 // console.log(getAverageActiveBalance([]));
 // // 0
 
-
 // const products = [
 //   { name: "Monstera", price: 80, isAvailable: true },
 //   { name: "Cactus", price: 25, isAvailable: false },
@@ -1881,7 +1700,6 @@
 
 // const getAveragePrice = (products) =>{
 
-
 // const newAverage =  products.filter(product => product.isAvailable);
 // const totalPrice = newAverage
 // .map(product => product.price)
@@ -1889,11 +1707,7 @@
 
 // return totalPrice === 0 ? 0 : totalPrice / newAverage.length;
 
-
-
 // }
-
-
 
 // console.log(getAveragePrice(products));
 // // 100
@@ -1910,4 +1724,77 @@
 // // 0
 
 // console.log(getAveragePrice([]));
+
 // // 0
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "horror"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism"],
+//   },
+// ];
+
+// const genres = books.flatMap(book => book.genres);
+// const newMasive = [...new Set(genres)];
+// console.log(newMasive);
+// console.log(genres);
+
+/*Task-1*/
+// Написати функцію getAverageGrade, яка приймає три оцінки та повертає середній бал, округлений до двох знаків після коми.
+
+
+
+// function getAverageGrade(n1, n2, n3) {
+//     const total = n1 + n2 + n3;
+//     const totalAveraga = total / 3;
+//     return totalAveraga.toFixed(2);
+// }
+
+
+// console.log(getAverageGrade(10, 9, 8)); // '9.00'
+// console.log(getAverageGrade(12, 10, 9)); // '10.33'
+// console.log(getAverageGrade(7, 8, 10)); // '8.33'
+
+
+
+
+
+// const convertToUah = (summ, convert) =>{
+// const totalPrice = summ * convert;
+// return totalPrice.toFixed(2)
+// };
+
+
+// console.log(convertToUah(10.5, 41.25)) // '433.13'
+// console.log(convertToUah(20, 40.5)) // '810.00'
+// console.log(convertToUah(15.75, 42)) // '661.50'
+
+
+
+
+// const getRandomLetter =(words) =>{
+
+
+
+// return words[Math.round(Math.random()  * words.length)];
+
+
+// }
+
+// console.log(getRandomLetter('JavaScript')) // наприклад, 'a'
+// console.log(getRandomLetter('Привіт')) // наприклад, 'в'
+// console.log(getRandomLetter('Компьютер')) // наприклад, 'п'
+
+
+
