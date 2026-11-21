@@ -1798,3 +1798,360 @@
 
 
 
+
+
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 }
+// ];
+// const productCards = products.map(product => {
+//   return `
+//     <div class="product-card">
+//       <h2>${product.name}</h2>
+//       <p>${product.price} грн.</p>
+//     </div>
+//   `;
+// });
+
+// document.querySelector(".products").innerHTML = productCards.join("");
+
+
+
+// const users = [
+//   { name: "Bohdan", age: 27, isActive: true },
+//   { name: "Alex", age: 16, isActive: false },
+//   { name: "John", age: 32, isActive: true },
+//   { name: "Anna", age: 22, isActive: false },
+//   { name: "Mark", age: 19, isActive: true }
+// ];
+
+// const getActiveUserNames = (users) =>{
+
+//     const isActiveUser = users
+//     .filter(user => user.isActive === true)
+//     .map( user => user.name);
+//     return isActiveUser;
+
+// };
+// console.log(getActiveUserNames(users));
+// // ["Bohdan", "John", "Mark"]
+
+// console.log(getActiveUserNames([
+//   { name: "Alex", age: 16, isActive: false },
+//   { name: "Anna", age: 22, isActive: false }
+// ]));
+// // []
+
+// console.log(getActiveUserNames([]));
+
+
+// // []
+
+
+// const users = [
+//   { name: "Bohdan", age: 27, balance: 1200 },
+//   { name: "Alex", age: 16, balance: 500 },
+//   { name: "John", age: 32, balance: 2000 },
+//   { name: "Anna", age: 22, balance: 800 }
+// ];
+// const findUserByName = (users, name) =>{
+
+ 
+// return users.find(user => user.name === name)
+ 
+
+
+// };
+
+
+
+
+// console.log(findUserByName(users, "John"));
+// // { name: "John", age: 32, balance: 2000 }
+
+// console.log(findUserByName(users, "Bohdan"));
+// // { name: "Bohdan", age: 27, balance: 1200 }
+
+// console.log(findUserByName(users, "Mark"));
+// // undefined
+
+
+
+
+// const users = [
+//   { name: "Bohdan", age: 27 },
+//   { name: "John", age: 32 },
+//   { name: "Mark", age: 19 }
+// ];
+
+// const areAllUsersAdults = (users) =>{
+//     return users.every(user => user.age >= 18);
+// }
+
+
+// console.log(areAllUsersAdults(users));
+// // true
+
+// console.log(areAllUsersAdults([
+//   { name: "Alex", age: 16 },
+//   { name: "John", age: 32 }
+// ]));
+// // false
+
+// console.log(areAllUsersAdults([]));
+// // true
+
+
+
+
+// const products = [
+//   { name: "Monstera", price: 80, inStock: false },
+//   { name: "Cactus", price: 25, inStock: false },
+//   { name: "Orchid", price: 120, inStock: true },
+//   { name: "Rose", price: 15, inStock: false }
+// ];
+
+// const hasAvailableProduct = (products) =>{
+
+// return products.some(product => product.inStock)
+
+
+// };
+
+
+
+
+// console.log(hasAvailableProduct(products));
+// // true
+
+// console.log(hasAvailableProduct([
+//   { name: "Laptop", inStock: false },
+//   { name: "Mouse", inStock: false }
+// ]));
+// // false
+
+// console.log(hasAvailableProduct([]));
+// // false
+
+
+// const products = [
+//   { name: "Monstera", price: 80 },
+//   { name: "Cactus", price: 25 },
+//   { name: "Orchid", price: 120 },
+//   { name: "Rose", price: 15 }
+// ];
+
+// const findMostExpensiveProduct = (products) =>{
+// if (products.length === 0) {
+//   return null;
+// }
+// const acc = products.reduce((acc, product) => acc.price > product.price ? acc : product);
+// return acc;
+
+
+// };
+
+
+// console.log(findMostExpensiveProduct(products));
+// // { name: "Orchid", price: 120 }
+
+// console.log(findMostExpensiveProduct([
+//   { name: "Laptop", price: 1200 },
+//   { name: "Mouse", price: 50 }
+// ]));
+// // { name: "Laptop", price: 1200 }
+
+
+// const users = [
+//   { name: "Bohdan", friends: ["Alex", "John"] },
+//   { name: "Anna", friends: ["Mark", "Alex"] },
+//   { name: "John", friends: ["Anna"] }
+// ];
+
+// const getUniqueFriends  = (users) =>{
+ 
+// const unique = users.flatMap(user => user.friends)
+
+// return [... new Set(unique)];
+
+
+// }
+// console.log(getUniqueFriends(users));
+// // ["Alex", "John", "Mark", "Alex", "Anna"]
+
+
+// const users = [
+//   { name: "Bohdan", age: 27 },
+//   { name: "Alex", age: 16 },
+//   { name: "John", age: 32 },
+//   { name: "Anna", age: 22 }
+// ];
+
+// const getUserIndex = (users, userName) =>{
+
+// const newUserr =  users.find(user => user.name);
+
+
+
+// return users.findIndex(user => user.name === userName)
+
+// }
+
+
+
+
+
+// console.log(getUserIndex(users, "John"));
+// // 2
+
+// console.log(getUserIndex(users, "Bohdan"));
+// // 0
+
+// console.log(getUserIndex(users, "Anna"));
+// // 3
+
+// console.log(getUserIndex(users, "Mark"));
+// // -1
+
+// const orders = [
+//   { id: 1, price: 250, isPaid: true },
+//   { id: 2, price: 400, isPaid: false },
+//   { id: 3, price: 150, isPaid: true },
+//   { id: 4, price: 300, isPaid: true }
+// ];
+// const getPaidOrdersTotal = (orders) =>{
+//     const totalPaidPrice = orders
+//     .filter(order => order.isPaid === true)
+//     .map(order => order.price)
+//      .reduce((total, price)=> total + price ,0)
+// return totalPaidPrice
+
+// }
+
+
+
+// console.log(getPaidOrdersTotal(orders));
+// // 700
+
+// console.log(getPaidOrdersTotal([
+//   { id: 1, price: 500, isPaid: false },
+//   { id: 2, price: 200, isPaid: true }
+// ]));
+// // 200
+
+// console.log(getPaidOrdersTotal([]));
+// // 0
+
+
+////////////////////////////////////////////////////////
+const customer = {
+  username: "Mango",
+  balance: 24000,
+  discount: 0.1,
+  orders: ["Burger", "Pizza", "Salad"],
+  // Change code below this line
+  getBalance() {
+    return this.balance;
+  },
+  getDiscount() {
+    return this.discount;
+  },
+  setDiscount(value) {
+    this.discount = value;
+  },
+  getOrders() {
+    return this.orders;
+  },
+  addOrder(cost, order) {
+    this.balance -= cost - cost * this.discount;
+    this.orders.push(order);
+  },
+  // Change code above this line
+};
+
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+
+customer.addOrder(5000, "Steak");
+console.log(customer.getBalance()); // 19750
+
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+///////////////////////////////////////////////////////////////
+class Storage{
+constructor(item){
+this.item = item;
+};
+getItems(){
+    return this.item
+};
+addItem(newItem){
+
+this.item.push(newItem);
+};
+removeItem(itemToRemove){
+  const index = this.item.indexOf(itemToRemove);
+
+  if (index !== -1) {
+    this.item.splice(index, 1);
+  }
+
+};
+
+
+
+};
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+//////////////////////////////////////////////////////////
+
+
+class StringBuilder{
+   #value 
+constructor(initialValue) {
+this.#value = initialValue;
+  }
+
+
+  getValue(){
+return this.#value
+  };
+
+
+  padEnd(str){
+
+this.#value += str
+  };
+
+
+padStart(str){
+this.#value = str + this.#value;
+
+};
+
+padBoth(str){
+this.#value = str + this.#value +  str;
+};
+
+
+
+};
+
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
