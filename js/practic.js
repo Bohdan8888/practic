@@ -1753,52 +1753,34 @@
 /*Task-1*/
 // Написати функцію getAverageGrade, яка приймає три оцінки та повертає середній бал, округлений до двох знаків після коми.
 
-
-
 // function getAverageGrade(n1, n2, n3) {
 //     const total = n1 + n2 + n3;
 //     const totalAveraga = total / 3;
 //     return totalAveraga.toFixed(2);
 // }
 
-
 // console.log(getAverageGrade(10, 9, 8)); // '9.00'
 // console.log(getAverageGrade(12, 10, 9)); // '10.33'
 // console.log(getAverageGrade(7, 8, 10)); // '8.33'
-
-
-
-
 
 // const convertToUah = (summ, convert) =>{
 // const totalPrice = summ * convert;
 // return totalPrice.toFixed(2)
 // };
 
-
 // console.log(convertToUah(10.5, 41.25)) // '433.13'
 // console.log(convertToUah(20, 40.5)) // '810.00'
 // console.log(convertToUah(15.75, 42)) // '661.50'
 
-
-
-
 // const getRandomLetter =(words) =>{
 
-
-
 // return words[Math.round(Math.random()  * words.length)];
-
 
 // }
 
 // console.log(getRandomLetter('JavaScript')) // наприклад, 'a'
 // console.log(getRandomLetter('Привіт')) // наприклад, 'в'
 // console.log(getRandomLetter('Компьютер')) // наприклад, 'п'
-
-
-
-
 
 // const products = [
 //   { name: "Monstera", price: 80 },
@@ -1815,8 +1797,6 @@
 // });
 
 // document.querySelector(".products").innerHTML = productCards.join("");
-
-
 
 // const users = [
 //   { name: "Bohdan", age: 27, isActive: true },
@@ -1845,9 +1825,7 @@
 
 // console.log(getActiveUserNames([]));
 
-
 // // []
-
 
 // const users = [
 //   { name: "Bohdan", age: 27, balance: 1200 },
@@ -1857,15 +1835,9 @@
 // ];
 // const findUserByName = (users, name) =>{
 
- 
 // return users.find(user => user.name === name)
- 
-
 
 // };
-
-
-
 
 // console.log(findUserByName(users, "John"));
 // // { name: "John", age: 32, balance: 2000 }
@@ -1876,9 +1848,6 @@
 // console.log(findUserByName(users, "Mark"));
 // // undefined
 
-
-
-
 // const users = [
 //   { name: "Bohdan", age: 27 },
 //   { name: "John", age: 32 },
@@ -1888,7 +1857,6 @@
 // const areAllUsersAdults = (users) =>{
 //     return users.every(user => user.age >= 18);
 // }
-
 
 // console.log(areAllUsersAdults(users));
 // // true
@@ -1902,9 +1870,6 @@
 // console.log(areAllUsersAdults([]));
 // // true
 
-
-
-
 // const products = [
 //   { name: "Monstera", price: 80, inStock: false },
 //   { name: "Cactus", price: 25, inStock: false },
@@ -1916,11 +1881,7 @@
 
 // return products.some(product => product.inStock)
 
-
 // };
-
-
-
 
 // console.log(hasAvailableProduct(products));
 // // true
@@ -1933,7 +1894,6 @@
 
 // console.log(hasAvailableProduct([]));
 // // false
-
 
 // const products = [
 //   { name: "Monstera", price: 80 },
@@ -1949,9 +1909,7 @@
 // const acc = products.reduce((acc, product) => acc.price > product.price ? acc : product);
 // return acc;
 
-
 // };
-
 
 // console.log(findMostExpensiveProduct(products));
 // // { name: "Orchid", price: 120 }
@@ -1962,7 +1920,6 @@
 // ]));
 // // { name: "Laptop", price: 1200 }
 
-
 // const users = [
 //   { name: "Bohdan", friends: ["Alex", "John"] },
 //   { name: "Anna", friends: ["Mark", "Alex"] },
@@ -1970,16 +1927,14 @@
 // ];
 
 // const getUniqueFriends  = (users) =>{
- 
+
 // const unique = users.flatMap(user => user.friends)
 
 // return [... new Set(unique)];
 
-
 // }
 // console.log(getUniqueFriends(users));
 // // ["Alex", "John", "Mark", "Alex", "Anna"]
-
 
 // const users = [
 //   { name: "Bohdan", age: 27 },
@@ -1992,15 +1947,9 @@
 
 // const newUserr =  users.find(user => user.name);
 
-
-
 // return users.findIndex(user => user.name === userName)
 
 // }
-
-
-
-
 
 // console.log(getUserIndex(users, "John"));
 // // 2
@@ -2029,8 +1978,6 @@
 
 // }
 
-
-
 // console.log(getPaidOrdersTotal(orders));
 // // 700
 
@@ -2043,115 +1990,241 @@
 // console.log(getPaidOrdersTotal([]));
 // // 0
 
-
 ////////////////////////////////////////////////////////
-const customer = {
-  username: "Mango",
-  balance: 24000,
-  discount: 0.1,
-  orders: ["Burger", "Pizza", "Salad"],
-  // Change code below this line
-  getBalance() {
-    return this.balance;
-  },
-  getDiscount() {
-    return this.discount;
-  },
-  setDiscount(value) {
-    this.discount = value;
-  },
-  getOrders() {
-    return this.orders;
-  },
-  addOrder(cost, order) {
-    this.balance -= cost - cost * this.discount;
-    this.orders.push(order);
-  },
-  // Change code above this line
-};
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Change code above this line
+// };
 
-customer.setDiscount(0.15);
-console.log(customer.getDiscount()); // 0.15
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
 
-customer.addOrder(5000, "Steak");
-console.log(customer.getBalance()); // 19750
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
 
-console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
 ///////////////////////////////////////////////////////////////
-class Storage{
-constructor(item){
-this.item = item;
-};
-getItems(){
-    return this.item
-};
-addItem(newItem){
+// class Storage{
+// constructor(item){
+// this.item = item;
+// };
+// getItems(){
+//     return this.item
+// };
+// addItem(newItem){
 
-this.item.push(newItem);
-};
-removeItem(itemToRemove){
-  const index = this.item.indexOf(itemToRemove);
+// this.item.push(newItem);
+// };
+// removeItem(itemToRemove){
+//   const index = this.item.indexOf(itemToRemove);
 
-  if (index !== -1) {
-    this.item.splice(index, 1);
-  }
+//   if (index !== -1) {
+//     this.item.splice(index, 1);
+//   }
 
-};
+// };
 
+// };
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 
-};
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-
-storage.addItem("Droid");
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-
-storage.removeItem("Prolonger");
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 //////////////////////////////////////////////////////////
 
+// class StringBuilder{
+//    #value
+// constructor(initialValue) {
+// this.#value = initialValue;
+//   }
 
-class StringBuilder{
-   #value 
-constructor(initialValue) {
-this.#value = initialValue;
-  }
+//   getValue(){
+// return this.#value
+//   };
+
+//   padEnd(str){
+
+// this.#value += str
+//   };
+
+// padStart(str){
+// this.#value = str + this.#value;
+
+// };
+
+// padBoth(str){
+// this.#value = str + this.#value +  str;
+// };
+
+// };
+
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+// const player = {
+//   name: "Bogdan",
+// };
+
+// function showInfo(level, score) {
+//   console.log(
+//     `${this.name}: уровень ${level}, очки ${score}`
+//   );
+// }
+
+// const showPlayer = showInfo.bind(player, 10, 500);
+// showPlayer()
+
+// const car = {
+//   brand: "BMW",
+// };
+
+// function showCar(model, year, color) {
+//   console.log(
+//     `${this.brand} ${model} ${year} ${color}`
+//   );
+// }
+
+// const myCar = showCar.bind(car, "X5" );
+// myCar(2024, "Black")
+
+// class BankAccount{
+// #balance
+
+//     constructor(owner, balance){
+// this.owner = owner;
+// this.#balance = balance;
+// }
+//  get balance (){
+// return this.#balance;
+//  }
+
+//  deposit(amount){
+
+//  if (amount > 0) {
+//     this.#balance += amount;
+//   }
+
+//  }
+
+//  withdraw(amount){
+//     if (amount > 0 && this.#balance >= amount) {
+//        this.#balance -=  amount ;
+//     }
+
+//  }
+
+// transfer(targetAccount, amount){
+//     if (this.#balance > 0 && this.#balance >= amount) {
+//         this.#balance -= amount
+//         targetAccount.deposit(amount);
+
+//     }
+
+// }
+
+// };
+// const alex = new BankAccount("Alex", 1000);
+// const bogdan = new BankAccount("Bogdan", 500);
+
+// alex.transfer(bogdan, 300);
+
+// console.log(alex.balance);   // 700
+// console.log(bogdan.balance); // 800
+//////////////////////////////////////////////////////////
+
+const item = document.querySelectorAll("li.item");
+
+console.log(`Number of categories: ${item.length} `);
+
+item.forEach((item) => {
+  const title = item.querySelector("h2");
+
+  console.log(` Category: ${title.textContent}`);
+
+  const itemUnder = item.querySelectorAll("li");
+  console.log(`Elements: ${itemUnder.length}`);
+});
+///////////////////////////////////////////////////////////////////
 
 
-  getValue(){
-return this.#value
-  };
-
-
-  padEnd(str){
-
-this.#value += str
-  };
-
-
-padStart(str){
-this.#value = str + this.#value;
-
-};
-
-padBoth(str){
-this.#value = str + this.#value +  str;
-};
 
 
 
-};
+const images = [
+  {
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
+  },
+  {
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+  },
+  {
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
+    alt: "Alpine Spring Meadows",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
+    alt: "Nature Landscape",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
+    alt: "Lighthouse Coast Sea",
+  },
+];
 
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
+const imageJs = document.querySelector('.image-js');
 
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
+images.forEach((image) => {
+  const item = document.createElement("li");
+  const img = document.createElement("img");
 
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
 
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+  img.src = image.url;
+  img.alt = image.alt
+  img.width = 300;
+  img.height = 200;
+ 
+
+  item.append(img);
+  imageJs.append(item);
+});
+
+
