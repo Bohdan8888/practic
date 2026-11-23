@@ -2227,4 +2227,3 @@ images.forEach((image) => {
   imageJs.append(item);
 });
 
-
