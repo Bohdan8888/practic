@@ -2165,126 +2165,155 @@
 // console.log(bogdan.balance); // 800
 //////////////////////////////////////////////////////////
 
-const item = document.querySelectorAll("li.item");
+// const item = document.querySelectorAll("li.item");
 
-console.log(`Number of categories: ${item.length} `);
+// console.log(`Number of categories: ${item.length} `);
 
-item.forEach((item) => {
-  const title = item.querySelector("h2");
+// item.forEach((item) => {
+//   const title = item.querySelector("h2");
 
-  console.log(` Category: ${title.textContent}`);
+//   console.log(` Category: ${title.textContent}`);
 
-  const itemUnder = item.querySelectorAll("li");
-  console.log(`Elements: ${itemUnder.length}`);
-});
+//   const itemUnder = item.querySelectorAll("li");
+//   console.log(`Elements: ${itemUnder.length}`);
+// });
 // ///////////////////////////////////////////////////////////////////
 
-const images = [
-  {
-    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
-    alt: "White and Black Long Fur Cat",
-  },
-  {
-    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
-    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
-  },
-  {
-    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
-    alt: "Group of Horses Running",
-  },
-  {
-    url: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
-    alt: "Alpine Spring Meadows",
-  },
-  {
-    url: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
-    alt: "Nature Landscape",
-  },
-  {
-    url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
-    alt: "Lighthouse Coast Sea",
-  },
-];
+// const images = [
+//   {
+//     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+//     alt: "White and Black Long Fur Cat",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Group of Horses Running",
+//   },
+//   {
+//     url: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
+//     alt: "Alpine Spring Meadows",
+//   },
+//   {
+//     url: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
+//     alt: "Nature Landscape",
+//   },
+//   {
+//     url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
+//     alt: "Lighthouse Coast Sea",
+//   },
+// ];
 
-const imageJs = document.querySelector(".image-js");
+// const imageJs = document.querySelector(".image-js");
 
-images.forEach((image) => {
-  const item = document.createElement("li");
-  const img = document.createElement("img");
+// images.forEach((image) => {
+//   const item = document.createElement("li");
+//   const img = document.createElement("img");
 
-  img.src = image.url;
-  img.alt = image.alt;
-  img.width = 300;
-  img.height = 200;
+//   img.src = image.url;
+//   img.alt = image.alt;
+//   img.width = 300;
+//   img.height = 200;
 
-  item.append(img);
-  imageJs.append(item);
-});
+//   item.append(img);
+//   imageJs.append(item);
+// });
 /////////////////////////////////////////////////
 
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-const input = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+// const input = document.querySelector("#name-input");
+// const output = document.querySelector("#name-output");
 
-input.addEventListener("input", () => {
-  const name = input.value.trim();
+// input.addEventListener("input", () => {
+//   const name = input.value.trim();
 
-  if (name === "") {
-    output.textContent = "Anonymous";
-  } else {
-    output.textContent = name;
-  }
-});
+//   if (name === "") {
+//     output.textContent = "Anonymous";
+//   } else {
+//     output.textContent = name;
+//   }
+// });
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-const form = document.querySelector(".login-form");
+// const form = document.querySelector(".login-form");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  const formData = new FormData(form);
+//   const formData = new FormData(form);
 
-  const email = formData.get("email").trim();
-  const password = formData.get("password").trim();
+//   const email = formData.get("email").trim();
+//   const password = formData.get("password").trim();
 
-  if (email === "" || password === "") {
-    return alert("All form fields must be filled in");
-  }
+//   if (email === "" || password === "") {
+//     return alert("All form fields must be filled in");
+//   }
 
-  const data = {
-    email,
-    password,
-  };
+//   const data = {
+//     email,
+//     password,
+//   };
 
-  console.log(data);
-  form.reset();
-});
+//   console.log(data);
+//   form.reset();
+// });
 ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
 ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-const button = document.querySelector('.change-color')
+// const button = document.querySelector('.change-color')
 
-button.addEventListener('click',()=>{
-    const color = getRandomHexColor()
-    document.body.style.backgroundColor = color;
-    const span = document.querySelector(".color");
-    span.textContent = color
-})
+// button.addEventListener('click',()=>{
+//     const color = getRandomHexColor()
+//     document.body.style.backgroundColor = color;
+//     const span = document.querySelector(".color");
+//     span.textContent = color
+// })
 
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, '0')}`;
-}
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, '0')}`;
+// }
 ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const videos = [
+  "https://www.w3schools.com/html/mov_bbb.mp4",
+  "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+];
+
+const container = document.querySelector(".videos");
+const video = document.createElement("video");
+const nextButton = document.querySelector(".next-video");
+
+let currentIndex = 0;
+
+video.src = videos[currentIndex];
+video.controls = true;
+video.width = 400;
+video.autoplay = true;
+video.muted = true;
+
+nextButton.addEventListener("click", () => {
+  currentIndex += 1;
+
+  if (currentIndex >= videos.length) {
+    currentIndex = 0;
+  }
+
+  video.src = videos[currentIndex];
+  video.play();
+});
+
+container.append(video);
 
 
 
