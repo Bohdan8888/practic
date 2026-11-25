@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin: 0;
+  max-width: 1128px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -15,5 +16,6 @@
 .gallery img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 360 / 300;
+  object-fit: cover;
 }
