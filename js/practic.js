@@ -2222,9 +2222,7 @@
 // });
 /////////////////////////////////////////////////
 
-
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 
 // const input = document.querySelector("#name-input");
 // const output = document.querySelector("#name-output");
@@ -2266,8 +2264,6 @@
 // });
 ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-
 ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // const button = document.querySelector('.change-color')
 
@@ -2277,7 +2273,6 @@
 //     const span = document.querySelector(".color");
 //     span.textContent = color
 // })
-
 
 // function getRandomHexColor() {
 //   return `#${Math.floor(Math.random() * 16777215)
@@ -2403,8 +2398,6 @@
 
 // gallery.insertAdjacentHTML("beforeend", markup);
 
-
-
 // gallery.addEventListener('click', event =>{
 // event.preventDefault();
 // if (event.target.nodeName !== "IMG") {
@@ -2416,3 +2409,240 @@
 // );
 //   instance.show();
 //   });
+
+// const users = [
+//   { id: 1, name: "Alex", age: 25, isActive: true },
+//   { id: 2, name: "John", age: 17, isActive: true },
+//   { id: 3, name: "Emma", age: 28, isActive: false },
+//   { id: 4, name: "Kate", age: 22, isActive: true },
+//   { id: 5, name: "Mike", age: 16, isActive: false },
+// ];
+
+// const getActiveUsers = (users) => {
+//   return users
+//     .filter((user) => user.isActive && user.age >= 18)
+//     .map((user) => user.name.toUpperCase());
+// };
+// console.log(getActiveUsers(users));
+
+// const orders = [
+//   { id: 1, name: "Laptop", price: 1200, quantity: 2, paid: true },
+//   { id: 2, name: "Mouse", price: 50, quantity: 3, paid: false },
+//   { id: 3, name: "Keyboard", price: 100, quantity: 2, paid: true },
+//   { id: 4, name: "Monitor", price: 300, quantity: 1, paid: true },
+//   { id: 5, name: "Headphones", price: 80, quantity: 4, paid: false },
+// ];
+// const getTotalRevenue = (orders) => {
+//   return orders
+//     .filter((order) => order.paid)
+//     .reduce((total, price) => {
+//       const totalPrice = price.quantity * price.price;
+//       return totalPrice + total;
+//     }, 0);
+// };
+
+// console.log(getTotalRevenue(orders));
+// // 2900
+// const cart = [
+//   { id: 1, name: "Laptop", price: 1200, quantity: 2 },
+//   { id: 2, name: "Mouse", price: 50, quantity: 1 },
+// ];
+
+// const product = {
+//   id: 2,
+//   name: "Mouse",
+//   price: 50,
+// };
+// const addToCart = (cart, product) =>{
+// const trueProduct = cart.find((item)=> item.id === product.id)
+// console.log(trueProduct);
+
+// if (trueProduct) {
+// return cart.map((item)=> {
+//    if (item.id === product.id) {
+//    return {...item, quantity: item.quantity + 1}
+//    } 
+//     return item;
+// }) ;
+  
+
+// }else{
+// return[...cart, {...product, quantity: 1}]
+// }
+
+
+// }
+
+
+
+
+// console.log(addToCart(cart, product));
+
+// // [
+// //   { id: 1, name: "Laptop", price: 1200, quantity: 2 },
+// //   { id: 2, name: "Mouse", price: 50, quantity: 2 },
+// // ]
+
+// const cart = [
+//   { id: 1, name: "Laptop", price: 1200, quantity: 2 },
+//   { id: 2, name: "Mouse", price: 50, quantity: 1 },
+//   { id: 3, name: "Monitor", price: 300, quantity: 3 },
+// ];
+
+// const removeFromCart = (cart, productId) =>{
+//     const findProduct = cart
+//     .find((item)=> item.id === productId)
+//       if (!findProduct) {
+//         return cart;
+//       }
+//       if (findProduct.quantity > 1) {
+//         return cart.map((item)=>{
+//             if (item.id === productId) {
+//              return {...item, quantity: item.quantity -1} 
+//             }else{
+//              return item;
+//             }
+//         });
+      
+//           }
+// else if (findProduct.quantity === 1) {
+//             return cart.filter((item) => item.id !== productId)
+
+      
+        
+// }      
+// };
+// console.log(removeFromCart(cart, 1));
+// // Laptop: quantity: 1
+
+// console.log(removeFromCart(cart, 2));
+// // Mouse полностью удалён
+
+// console.log(removeFromCart(cart, 3));
+// // Monitor: quantity: 2
+
+// console.log(removeFromCart(cart, 10));
+// // Корзина без изменений
+
+
+
+// const users = [
+//   { id: 1, name: "Alex", email: "alex@gmail.com" },
+//   { id: 2, name: "John", email: "john@gmail.com" },
+//   { id: 3, name: "Emma", email: "emma@gmail.com" },
+// ];
+
+// const updateEmail = (users, userId, newEmail) =>{
+
+
+// return users.map((item)=>{
+//     if (item.id === userId) {
+//         return {...item, email: newEmail}
+//     }else{
+//         return item;
+//     }
+// })
+
+
+
+
+
+
+// }
+
+
+// console.log(updateEmail(users, 2, "john@outlook.com"));
+
+// const products = [
+//   { id: 1, name: "Laptop", isFavorite: false },
+//   { id: 2, name: "Mouse", isFavorite: true },
+//   { id: 3, name: "Monitor", isFavorite: false },
+// ];
+// const  toggleFavorite = (products, productId) =>{
+// return products.map((product)=>{
+// if (product.id === productId) {
+//     return {...product, isFavorite: !product.isFavorite}
+// } else {
+//     return product
+// }
+// });
+
+
+// };
+// console.log(toggleFavorite(products, 2));
+
+// const products = [
+//   { id: 1, name: "iPhone 16", price: 799, stock: 5 },
+//   { id: 2, name: "Samsung S25", price: 899, stock: 0 },
+//   { id: 3, name: "iPhone 15", price: 649, stock: 3 },
+//   { id: 4, name: "Google Pixel", price: 699, stock: 4 },
+//   { id: 5, name: "iPhone 14", price: 499, stock: 0 },
+// ];
+
+// const searchProducts = (products, query)=>{
+//     return products
+// .filter((product)=> product.name.toUpperCase().includes(query.toUpperCase()) && product.stock > 0)
+    
+    
+// };
+
+// console.log(searchProducts(products, "IPHONE"));
+
+// const products = [
+//   { id: 1, name: "Laptop", price: 1200, stock: 5 },
+//   { id: 2, name: "Mouse", price: 50, stock: 10 },
+//   { id: 3, name: "Keyboard", price: 100, stock: 0 },
+//   { id: 4, name: "Monitor", price: 300, stock: 3 },
+//   { id: 5, name: "Headphones", price: 80, stock: 7 },
+// ];
+// const getAffordableProducts = (products, maxPrice) =>{
+// return products
+// .filter((product)=> product.price <= maxPrice && product.stock > 0)
+// .map((item)=> item.name);
+
+
+
+// };
+// console.log(getAffordableProducts(products, 300));
+// // ["Mouse", "Monitor", "Headphones"]
+
+// console.log(getAffordableProducts(products, 80));
+// // ["Mouse", "Headphones"]
+
+// console.log(getAffordableProducts(products, 20));
+// // []
+
+
+const cart = [
+  { id: 1, name: "Laptop", price: 1200, quantity: 1, discount: 10 },
+  { id: 2, name: "Mouse", price: 50, quantity: 2, discount: 0 },
+  { id: 3, name: "Monitor", price: 300, quantity: 2, discount: 20 },
+  { id: 4, name: "Keyboard", price: 100, quantity: 1, discount: 15 },
+];
+const calculateOrder = (cart, selectedIds)=>{
+const filterItems = cart
+.filter((item) => selectedIds.includes(item.id))
+.reduce((total, item) =>{
+const discount = item.price * item.discount / 100;
+const priceWithDiscount = item.price - discount;
+const totalPrice = priceWithDiscount * item.quantity;
+
+
+})
+
+
+
+}
+
+console.log(calculateOrder(cart, [1, 3]));
+// { totalPrice: 1560, totalQuantity: 3 }
+
+console.log(calculateOrder(cart, [2, 4]));
+// { totalPrice: 185, totalQuantity: 3 }
+
+console.log(calculateOrder(cart, [10]));
+// { totalPrice: 0, totalQuantity: 0 }
+
+console.log(calculateOrder(cart, []));
+// { totalPrice: 0, totalQuantity: 0 }
+
