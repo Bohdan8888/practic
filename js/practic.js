@@ -2612,37 +2612,3 @@
 // console.log(getAffordableProducts(products, 20));
 // // []
 
-
-const cart = [
-  { id: 1, name: "Laptop", price: 1200, quantity: 1, discount: 10 },
-  { id: 2, name: "Mouse", price: 50, quantity: 2, discount: 0 },
-  { id: 3, name: "Monitor", price: 300, quantity: 2, discount: 20 },
-  { id: 4, name: "Keyboard", price: 100, quantity: 1, discount: 15 },
-];
-const calculateOrder = (cart, selectedIds)=>{
-const filterItems = cart
-.filter((item) => selectedIds.includes(item.id))
-.reduce((total, item) =>{
-const discount = item.price * item.discount / 100;
-const priceWithDiscount = item.price - discount;
-const totalPrice = priceWithDiscount * item.quantity;
-
-
-})
-
-
-
-}
-
-console.log(calculateOrder(cart, [1, 3]));
-// { totalPrice: 1560, totalQuantity: 3 }
-
-console.log(calculateOrder(cart, [2, 4]));
-// { totalPrice: 185, totalQuantity: 3 }
-
-console.log(calculateOrder(cart, [10]));
-// { totalPrice: 0, totalQuantity: 0 }
-
-console.log(calculateOrder(cart, []));
-// { totalPrice: 0, totalQuantity: 0 }
-
